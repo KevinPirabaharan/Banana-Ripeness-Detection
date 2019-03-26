@@ -14,6 +14,7 @@ import sys
 def loadingBar(count,total,size):
     percent = float(count)/float(total)*100
     sys.stdout.write("\r" + str(int(count)).rjust(3,'0')+"/"+str(int(total)).rjust(3,'0') + ' [' + '='*int(percent/10)*size + ' '*(10-int(percent/10))*size + ']')
+
 # def rgb_to_hsv(r, g, b):
 #     r, g, b = r/255.0, g/255.0, b/255.0
 #     mx = max(r, g, b)
@@ -64,7 +65,7 @@ def imageSegment(imagePath, imageName, output):
     imwrite_colour("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png', redB, greenB, blueB)
     endDT = datetime.datetime.now()
     currentDT = endDT - startDT
-    output.write(imageName + ": \tTime Taken: " + str(currentDT) + "\tBanana Size: " + str(bananaSA) + "\n\n")
+    output.write(imageName + ": \tTime Taken: " + str(currentDT) + "\t\tBanana Size: " + str(bananaSA) + " pixels\n\n")
 
     #Returns the surface area of the banana for BrownSpot Analysis
     return bananaSA
