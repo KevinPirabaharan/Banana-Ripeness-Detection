@@ -547,4 +547,3 @@ y046.jpg: 	Time Taken: 0:00:02.868093	Banana Size: 183869
 y047.jpg: 	Time Taken: 0:00:02.859032	Banana Size: 193248
 
 y048.jpg: 	Time Taken: 0:00:02.949969	Banana Size: 194331
-
