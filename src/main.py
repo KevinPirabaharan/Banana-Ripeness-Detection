@@ -5,50 +5,51 @@
 from imageIO import *
 from imthr_lib import*
 from PIL import Image
-import cv2
+# import cv2
 import datetime
 import glob
 import os
 import sys
 
+# Loading bar function to show progress of tasks
+#
+# Parameters:
+# (in)    count,total,size     :  progress so far; total tasks to accomplish; size of loading bar pixels
+#
 def loadingBar(count,total,size):
     percent = float(count)/float(total)*100
     sys.stdout.write("\r" + str(int(count)).rjust(3,'0')+"/"+str(int(total)).rjust(3,'0') + ' [' + '='*int(percent/10)*size + ' '*(10-int(percent/10))*size + ']')
 
-# def rgb_to_hsv(r, g, b):
-#     r, g, b = r/255.0, g/255.0, b/255.0
-#     mx = max(r, g, b)
-#     mn = min(r, g, b)
-#     df = mx-mn
-#     if mx == mn:
-#         h = 0
-#     elif mx == r:
-#         h = (60 * ((g-b)/df) + 360) % 360
-#     elif mx == g:
-#         h = (60 * ((b-r)/df) + 120) % 360
-#     elif mx == b:
-#         h = (60 * ((r-g)/df) + 240) % 360
-#     if mx == 0:
-#         s = 0
-#     else:
-#         s = (df/mx)*100
-#     v = mx*100
-#     return h, s, v
-
-# TODO: Image Segmentation
+# Function: Image Segmentation
+#
+# The function takes in an image and aims to segment the banana out, exporting a .png with just the bananaand the background turned to black
+#
+# Parameters:
+# (in)    imagePath, imageName, output :  file path of the image; fileName; datafile to print results of the function
+# (out)   bananaSA                     :  Returns the surface area of the banana in pixels
+#
 def imageSegment(imagePath, imageName, output):
+    #start timer for the function
+    startDT = datetime.datetime.now()
+
+    #initialize color channels and size variables
     red, green, blue = imread_colour(imagePath)
-    im = Image.open(imagePath)
-    height, width = im.size
     redB = np.zeros((width,height))
     greenB = np.zeros((width,height))
     blueB = np.zeros((width,height))
-    startDT = datetime.datetime.now()
+    im = Image.open(imagePath)
+    height, width = im.size
+    bananaSA = 0
+
+    #find the otsu threshold of the blue channel and then binarized into a black and white image
+    #the pixels of the banana should be black (0), whilst the rest of the image should be white (255)
     thr = otsu(blue)
     imgBlueOtsu = im2bw(blue,thr)
     # imwrite_gray("Blue.jpeg", imgBlueOtsu)
-    bananaSA = 0
 
+    #the Black and White image is looked at pixel by pixel
+    #the black pixels of the the image are saved as the color of the original image, whilst the white pixels are turned Black
+    #this allows the banana to keep it's color while the rest of the image is blackened
     for i in range(0, width-1):
         for j in range(0, height-1):
             avg = (float(red[i,j]) + float(blue[i,j]) + float(green[i,j])) / 3
@@ -62,6 +63,7 @@ def imageSegment(imagePath, imageName, output):
                 greenB[i,j] = 0
                 blueB[i,j] = 0
 
+    #image is saved and total time taken, total pixel size are all written to a text file
     imwrite_colour("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png', redB, greenB, blueB)
     endDT = datetime.datetime.now()
     currentDT = endDT - startDT
@@ -72,6 +74,8 @@ def imageSegment(imagePath, imageName, output):
 
 # TODO: BrownSpot Analysis
 
+
+#Program loop to run the program
 inputFolder = "../images/raw/"
 data = open("../data/segmentationResults.txt", 'w')
 fileCount = 0
