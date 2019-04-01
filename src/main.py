@@ -73,7 +73,61 @@ def imageSegment(imagePath, imageName, output):
     return bananaSA
 
 # TODO: BrownSpot Analysis
+def brownSpotAnalysis(bananaSize,imagePath,imageName):
+    im = io.imread(imagePath)
 
+    # original image is converted to lab color space
+    lab_color = color.rgb2lab(im);
+    #converted to yCbCr color space and gray
+    yCbCr_color = cv2.cvtColor(im,cv2.COLOR_BGR2YCR_CB)
+    gray = color.rgb2gray(yCbCr_color)
+
+    # save the gray image and read it
+    misc.imsave("../images/processed/gray.png",gray);
+    gray = misc.imread("../images/processed/gray.png");
+
+    #Minimum error is used to get thethresholding value
+    val = minError(gray)
+    print "min error threshold value: " + str(val)
+
+    # Masks are created from gray image based on the threshold value
+    ret, mask = cv2.threshold(gray, val, 255, cv2.THRESH_BINARY)
+    mask2 = cv2.bitwise_not(mask)
+
+    #a mask is created based on the l.a.b color space for brown spots on the banana
+    brownSpotMask = np.zeros((im.shape[0], im.shape[1]))
+    for rowNum in range(len(lab_color)):
+        for colNum in range (len(lab_color[rowNum])):
+            if((lab_color[rowNum][colNum][1] < 12 ) and (lab_color[rowNum][colNum][2] > 28) and mask2[rowNum][colNum] !=0):
+                brownSpotMask[rowNum][colNum]= 255
+            else:
+                brownSpotMask[rowNum][colNum] = 0
+
+    misc.imsave("../images/processed/lab.png",lab_color);
+    misc.imsave("../images/processed/brownspotmask.png",brownSpotMask);
+
+    browspotmask = misc.imread("../images/processed/brownspotmask.png");
+
+    # 130 threshold to creake mask from brownspot mask image
+    ret, mask3 = cv2.threshold(browspotmask, 130, 255, cv2.THRESH_BINARY);
+    mask4 = cv2.bitwise_not(mask3)
+
+    banCount = cv2.bitwise_and(mask4,mask4, mask = mask2)
+    brownSpot = np.count_nonzero(banCount)
+    bananaCount2 = cv2.bitwise_and(mask3,mask3,mask = mask2)
+    banana = np.count_nonzero(bananaCount2)
+
+    print "Ripeness Level is: " + str((float(brownSpot)/(banana+brownSpot)) * 100);
+
+    #Union is made of the original image and the mask for viewing
+    union = cv2.bitwise_and(im,im,mask = mask2)
+    #Images are created with the minimum error union and the lab masks
+    brownSpotsIm= cv2.bitwise_and(union,union,mask = mask4)
+    bananaIm = cv2.bitwise_and(union,union,mask = mask3)
+
+    # saving images
+    # misc.imsave("../images/processed/brownSpotsimage.png",brownSpotsIm);
+    misc.imsave("../images/processed/bananaIm.png",bananaIm);
 
 #Program loop to run the program
 inputFolder = "../images/raw/"
@@ -86,6 +140,7 @@ while (progExit == False):
         print("Make sure the image is inside the \'image/raw/\' folder")
         fileName = raw_input("Enter File Name: ")
         bananaSize = imageSegment(inputFolder + fileName, fileName, data)
+        brownSpotAnalysis(bananaSize,inputFolder + fileName, fileName)
         print(str(bananaSize))
 
     elif (inp == 't') or (inp == 'T'):
