@@ -10,6 +10,19 @@ import datetime
 import glob
 import os
 import sys
+from skimage import io, color
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from skimage import color
+from skimage import io
+from scipy import ndimage, misc
+import matplotlib.cm as cm #
+from scipy import misc
+import numpy as np
+import matplotlib.pyplot as plt # import
+
+banCount = 0.0
+brownSpot = 0.0
 
 # Loading bar function to show progress of tasks
 #
@@ -45,7 +58,7 @@ def imageSegment(imagePath, imageName, output):
     #the pixels of the banana should be black (0), whilst the rest of the image should be white (255)
     thr = otsu(blue)
     imgBlueOtsu = im2bw(blue,thr)
-    # imwrite_gray("Blue.jpeg", imgBlueOtsu)
+    bananaSA = 0
 
     #the Black and White image is looked at pixel by pixel
     #the black pixels of the the image are saved as the color of the original image, whilst the white pixels are turned Black
@@ -67,7 +80,7 @@ def imageSegment(imagePath, imageName, output):
     imwrite_colour("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png', redB, greenB, blueB)
     endDT = datetime.datetime.now()
     currentDT = endDT - startDT
-    output.write(imageName + ": \tTime Taken: " + str(currentDT) + "\t\tBanana Size: " + str(bananaSA) + " pixels\n\n")
+    output.write(imageName + ": \tTime Taken: " + str(currentDT) + "\tBanana Size: " + str(bananaSA) + "\n\n")
 
     #Returns the surface area of the banana for BrownSpot Analysis
     return bananaSA
@@ -129,6 +142,8 @@ def brownSpotAnalysis(bananaSize,imagePath,imageName):
     # misc.imsave("../images/processed/brownSpotsimage.png",brownSpotsIm);
     misc.imsave("../images/processed/bananaIm.png",bananaIm);
 
+
+
 #Program loop to run the program
 inputFolder = "../images/raw/"
 data = open("../data/segmentationResults.txt", 'w')
@@ -140,8 +155,8 @@ while (progExit == False):
         print("Make sure the image is inside the \'image/raw/\' folder")
         fileName = raw_input("Enter File Name: ")
         bananaSize = imageSegment(inputFolder + fileName, fileName, data)
-        brownSpotAnalysis(bananaSize,inputFolder + fileName, fileName)
         print(str(bananaSize))
+        brownSpotAnalysis(bananaSize,inputFolder + fileName,fileName);
 
     elif (inp == 't') or (inp == 'T'):
         print("Testing Algorithms...")
