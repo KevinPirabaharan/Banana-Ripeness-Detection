@@ -10,6 +10,7 @@ import datetime
 import glob
 import os
 import sys
+import cv2
 from skimage import io, color
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
@@ -44,14 +45,14 @@ def loadingBar(count,total,size):
 def imageSegment(imagePath, imageName, output):
     #start timer for the function
     startDT = datetime.datetime.now()
-
+    im = Image.open(imagePath)
     #initialize color channels and size variables
+    height, width = im.size
+
     red, green, blue = imread_colour(imagePath)
     redB = np.zeros((width,height))
     greenB = np.zeros((width,height))
     blueB = np.zeros((width,height))
-    im = Image.open(imagePath)
-    height, width = im.size
     bananaSA = 0
 
     #find the otsu threshold of the blue channel and then binarized into a black and white image
