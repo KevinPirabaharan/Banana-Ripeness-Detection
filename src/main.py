@@ -90,6 +90,7 @@ def imageSegment(imagePath, imageName, output):
     object.append(bananaSA)
     object.append("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png')
     #Returns the surface area of the banana for BrownSpot Analysis
+    print (bananaSA)
     return object
 
 def ColorAnaysis(imagePath):
@@ -198,20 +199,13 @@ def brownSpotAnalysis(bananaSize,imagePath):
     brown_spot = 0
     for i in range(im.shape[0]):
         for j in range(im.shape[1]):
-<<<<<<< HEAD
             if difference(lab_color[i, j][0], lab_color[i, j][1]) > 10 and difference(lab_color[i, j][1], lab_color[i, j][2]) > 10: # it is brown spot
                 im[i, j][0] = 0
                 im[i, j][1] = 0
                 im[i, j][2] = 0
-=======
-            if difference(lab_color[i, j][0], lab_color[i, j][1]) < 25 and difference(lab_color[i, j][1], lab_color[i, j][2]) < 25: # it is brown spot
-                im[i, j][0] = 255
-                im[i, j][1] = 255
-                im[i, j][2] = 255
->>>>>>> 91002e2b6d0a6ca162b87e92b54b7472f199fe18
                 brown_spot += 1
-    misc.imsave("../images/brownSpot/v001Test.png", im)
-    print"brown spot " + str(float(brown_spot)/float(bananaSize))
+    misc.imsave("../images/brownSpot/brownSpot_" + os.path.basename(imagePath), im)
+    print"brown spot " + str((float(brown_spot)/float(bananaSize)) * 100) + " %"
     pass
 
 #Program loop to run the program
@@ -227,7 +221,6 @@ while (progExit == False):
         fileName = raw_input("Enter File Name: ")
         obj = imageSegment(inputFolder + fileName, fileName, data2)
         bananaSize = obj[0]
-        print(str(bananaSize))
         brownSpotAnalysis(bananaSize, obj[1]);
 
     elif (inp == 't') or (inp == 'T'):
