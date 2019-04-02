@@ -62,7 +62,7 @@ def imageSegment(imagePath, imageName, output):
     #the pixels of the banana should be white (255), whilst the rest of the image should be white (0)
     thr = otsu(red)
     imgRedOtsu = im2bw(red,thr)
-    imwrite_gray("Red2.jpeg", imgRedOtsu)
+    #imwrite_gray("Red2.jpeg", imgRedOtsu)
 
     red, green, blue = imread_colour(imagePath)
 
@@ -78,9 +78,9 @@ def imageSegment(imagePath, imageName, output):
                 blueB[i,j] = blue[i,j]
                 bananaSA += 1
             else:
-                redB[i,j] = 0
-                greenB[i,j] = 0
-                blueB[i,j] = 0
+                redB[i,j] = 255
+                greenB[i,j] = 255
+                blueB[i,j] = 255
 
     #image is saved and total time taken, total pixel size are all written to a text file
     imwrite_colour("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png', redB, greenB, blueB)
@@ -199,9 +199,9 @@ def brownSpotAnalysis(bananaSize,imagePath):
     for i in range(im.shape[0]):
         for j in range(im.shape[1]):
             if difference(lab_color[i, j][0], lab_color[i, j][1]) > 10 and difference(lab_color[i, j][1], lab_color[i, j][2]) > 10: # it is brown spot
-                im[i, j][0] = 255
-                im[i, j][1] = 255
-                im[i, j][2] = 255
+                im[i, j][0] = 0
+                im[i, j][1] = 0
+                im[i, j][2] = 0
                 brown_spot += 1
     misc.imsave("../images/brownSpot/ripeWholeTest.png", im)
     print"brown spot " + str(brown_spot/bananaSize)

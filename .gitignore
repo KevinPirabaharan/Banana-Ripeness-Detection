@@ -1,1 +1,6 @@
+# Ignore all python executable files
 *.pyc
+
+# Ignore all pycharm related files
+venv/
+.idea/
