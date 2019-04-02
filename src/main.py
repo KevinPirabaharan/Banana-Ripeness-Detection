@@ -24,7 +24,6 @@ import matplotlib.pyplot as plt # import
 
 banCount = 0.0
 brownSpot = 0.0
-
 # Loading bar function to show progress of tasks
 #
 # Parameters:
@@ -43,6 +42,7 @@ def loadingBar(count,total,size):
 # (out)   bananaSA                     :  Returns the surface area of the banana in pixels
 #
 def imageSegment(imagePath, imageName, output):
+    object = []
     #start timer for the function
     startDT = datetime.datetime.now()
     im = Image.open(imagePath)
@@ -87,9 +87,15 @@ def imageSegment(imagePath, imageName, output):
     endDT = datetime.datetime.now()
     currentDT = endDT - startDT
     output.write(imageName + ": \tTime Taken: " + str(currentDT) + "\tBanana Size: " + str(bananaSA) + "\n\n")
-
+    object.append(bananaSA)
+    object.append("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png')
     #Returns the surface area of the banana for BrownSpot Analysis
-    return bananaSA
+    return object
+
+def ColorAnaysis(imagePath):
+
+
+    pass
 
 
     # for i in range(0, HSV.shape[0]):
@@ -123,6 +129,7 @@ def imageSegment(imagePath, imageName, output):
 
 
 # TODO: BrownSpot Analysis
+"""
 def brownSpotAnalysis(bananaSize,imagePath,imageName):
     im = io.imread(imagePath)
 
@@ -136,7 +143,8 @@ def brownSpotAnalysis(bananaSize,imagePath,imageName):
     misc.imsave("../images/processed/gray.png",gray);
     gray = misc.imread("../images/processed/gray.png");
 
-    #Minimum error is used to get thethresholding value
+    #Minimum error is used to get the thresholding value
+    #what does this minimum error mean?
     val = minError(gray)
     print "min error threshold value: " + str(val)
 
@@ -158,7 +166,7 @@ def brownSpotAnalysis(bananaSize,imagePath,imageName):
 
     browspotmask = misc.imread("../images/processed/brownspotmask.png");
 
-    # 130 threshold to creake mask from brownspot mask image
+    # 130 threshold to create mask from brown spot mask image
     ret, mask3 = cv2.threshold(browspotmask, 130, 255, cv2.THRESH_BINARY);
     mask4 = cv2.bitwise_not(mask3)
 
@@ -178,22 +186,42 @@ def brownSpotAnalysis(bananaSize,imagePath,imageName):
     # saving images
     # misc.imsave("../images/processed/brownSpotsimage.png",brownSpotsIm);
     misc.imsave("../images/processed/bananaIm.png",bananaIm);
+"""
+def difference(a,b):
+    diff = abs(a-b)
+    return diff
 
-
+def brownSpotAnalysis(bananaSize,imagePath):
+    im = io.imread(imagePath)
+    # original image is converted to lab color space
+    lab_color = color.rgb2lab(im)
+    brown_spot = 0
+    for i in range(im.shape[0]):
+        for j in range(im.shape[1]):
+            if difference(lab_color[i, j][0], lab_color[i, j][1]) > 10 and difference(lab_color[i, j][1], lab_color[i, j][2]) > 10: # it is brown spot
+                im[i, j][0] = 255
+                im[i, j][1] = 255
+                im[i, j][2] = 255
+                brown_spot += 1
+    misc.imsave("../images/brownSpot/ripeWholeTest.png", im)
+    print"brown spot " + str(brown_spot/bananaSize)
+    pass
 
 #Program loop to run the program
 inputFolder = "../images/raw/"
 data2 = open("../data/testing.txt", 'w')
 fileCount = 0
+obj = []
 progExit = False
 while (progExit == False):
     inp = raw_input("\n \nExecute Algorithm on a single (F)ile, Run (T)est Suite, (Q)uit? ")
     if (inp == 'f') or (inp == 'F'):
         print("Make sure the image is inside the \'image/raw/\' folder")
         fileName = raw_input("Enter File Name: ")
-        bananaSize = imageSegment(inputFolder + fileName, fileName, data2)
+        obj = imageSegment(inputFolder + fileName, fileName, data2)
+        bananaSize = obj[0]
         print(str(bananaSize))
-        brownSpotAnalysis(bananaSize,inputFolder + fileName,fileName);
+        brownSpotAnalysis(bananaSize, obj[1]);
 
     elif (inp == 't') or (inp == 'T'):
         print("Testing Algorithms...")
@@ -202,8 +230,8 @@ while (progExit == False):
             fileCount += 1
             print("")
             fname = os.path.basename(file)
-            bananaSize = imageSegment(file, fname, data)
-            brownSpotAnalysis(bananaSize,inputFolder + fileName,fileName);
+            bananaSize = imageSegment(file, obj[1], data)
+            brownSpotAnalysis(bananaSize,obj[1])
             loadingBar(fileCount,len(glob.glob(inputFolder + "*.jpg")),2)
         data.close()
 

@@ -318,6 +318,7 @@ def otsu(im,nbr_bins=256):
 #   Kittler, J., Illingworth, J., "Minimum error thresholding", Pattern
 #   Recognition, Vol.19(1), pp.41-47 (1986)
 #
+
 def minError(im,nbr_bins=256):
     
     # Get the image histogram
