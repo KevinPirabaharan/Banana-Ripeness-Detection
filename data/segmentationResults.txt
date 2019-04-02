@@ -1,0 +1,554 @@
+g001.jpg: 	Time Taken: 0:00:08.211023		Banana Size: 159645 pixels
+
+g002.jpg: 	Time Taken: 0:00:38.349550		Banana Size: 608063 pixels
+
+g003.jpg: 	Time Taken: 0:00:09.105836		Banana Size: 146580 pixels
+
+g004.jpg: 	Time Taken: 0:00:08.962810		Banana Size: 151439 pixels
+
+g005.jpg: 	Time Taken: 0:00:08.944100		Banana Size: 161365 pixels
+
+g006.jpg: 	Time Taken: 0:00:09.094675		Banana Size: 159645 pixels
+
+g007.jpg: 	Time Taken: 0:00:08.964201		Banana Size: 158310 pixels
+
+g008.jpg: 	Time Taken: 0:00:08.876613		Banana Size: 141098 pixels
+
+g009.jpg: 	Time Taken: 0:00:08.993506		Banana Size: 181910 pixels
+
+g010.jpg: 	Time Taken: 0:00:09.041955		Banana Size: 158881 pixels
+
+g011.jpg: 	Time Taken: 0:00:09.254243		Banana Size: 159071 pixels
+
+g012.jpg: 	Time Taken: 0:00:09.351487		Banana Size: 165834 pixels
+
+g013.jpg: 	Time Taken: 0:00:09.261398		Banana Size: 160706 pixels
+
+g014.jpg: 	Time Taken: 0:00:09.185147		Banana Size: 151166 pixels
+
+g015.jpg: 	Time Taken: 0:00:09.247911		Banana Size: 158114 pixels
+
+g016.jpg: 	Time Taken: 0:00:09.244633		Banana Size: 170373 pixels
+
+g017.jpg: 	Time Taken: 0:00:09.117738		Banana Size: 177322 pixels
+
+g018.jpg: 	Time Taken: 0:00:09.232636		Banana Size: 150910 pixels
+
+g019.jpg: 	Time Taken: 0:00:09.227519		Banana Size: 150737 pixels
+
+g020.jpg: 	Time Taken: 0:00:10.002740		Banana Size: 155217 pixels
+
+g021.jpg: 	Time Taken: 0:00:09.643703		Banana Size: 151093 pixels
+
+g022.jpg: 	Time Taken: 0:00:09.448905		Banana Size: 168275 pixels
+
+g023.jpg: 	Time Taken: 0:00:09.232802		Banana Size: 165081 pixels
+
+g024.jpg: 	Time Taken: 0:00:09.345578		Banana Size: 158147 pixels
+
+g025.jpg: 	Time Taken: 0:00:09.366825		Banana Size: 145932 pixels
+
+g026.jpg: 	Time Taken: 0:00:09.298287		Banana Size: 152088 pixels
+
+g027.jpg: 	Time Taken: 0:00:09.311597		Banana Size: 147171 pixels
+
+g028.jpg: 	Time Taken: 0:00:09.273490		Banana Size: 141085 pixels
+
+g029.jpg: 	Time Taken: 0:00:09.341812		Banana Size: 171974 pixels
+
+g030.jpg: 	Time Taken: 0:00:09.368596		Banana Size: 154314 pixels
+
+g031.jpg: 	Time Taken: 0:00:09.273927		Banana Size: 133019 pixels
+
+g032.jpg: 	Time Taken: 0:00:09.281106		Banana Size: 152941 pixels
+
+g033.jpg: 	Time Taken: 0:00:09.198939		Banana Size: 159473 pixels
+
+g034.jpg: 	Time Taken: 0:00:09.266823		Banana Size: 157727 pixels
+
+g035.jpg: 	Time Taken: 0:00:09.243005		Banana Size: 172957 pixels
+
+g036.jpg: 	Time Taken: 0:00:09.276599		Banana Size: 128340 pixels
+
+g037.jpg: 	Time Taken: 0:00:09.362250		Banana Size: 143154 pixels
+
+g038.jpg: 	Time Taken: 0:00:09.278435		Banana Size: 151926 pixels
+
+g039.jpg: 	Time Taken: 0:00:09.165495		Banana Size: 143265 pixels
+
+g040.jpg: 	Time Taken: 0:00:09.259183		Banana Size: 160616 pixels
+
+g041.jpg: 	Time Taken: 0:00:09.179950		Banana Size: 153526 pixels
+
+g042.jpg: 	Time Taken: 0:00:09.192111		Banana Size: 158082 pixels
+
+g043.jpg: 	Time Taken: 0:00:09.316382		Banana Size: 177781 pixels
+
+g044.jpg: 	Time Taken: 0:00:09.278433		Banana Size: 162698 pixels
+
+g045.jpg: 	Time Taken: 0:00:09.157132		Banana Size: 173667 pixels
+
+g046.jpg: 	Time Taken: 0:00:09.385917		Banana Size: 168216 pixels
+
+g047.jpg: 	Time Taken: 0:00:09.301741		Banana Size: 177426 pixels
+
+g048.jpg: 	Time Taken: 0:00:09.319630		Banana Size: 141876 pixels
+
+g049.jpg: 	Time Taken: 0:00:09.377492		Banana Size: 179445 pixels
+
+g050.jpg: 	Time Taken: 0:00:09.120737		Banana Size: 142237 pixels
+
+g051.jpg: 	Time Taken: 0:00:09.408558		Banana Size: 168825 pixels
+
+g052.jpg: 	Time Taken: 0:00:09.253368		Banana Size: 142643 pixels
+
+g053.jpg: 	Time Taken: 0:00:09.288101		Banana Size: 150738 pixels
+
+g054.jpg: 	Time Taken: 0:00:09.371019		Banana Size: 181009 pixels
+
+g055.jpg: 	Time Taken: 0:00:09.360986		Banana Size: 149750 pixels
+
+g056.jpg: 	Time Taken: 0:00:09.289311		Banana Size: 149511 pixels
+
+g057.jpg: 	Time Taken: 0:00:09.234226		Banana Size: 146476 pixels
+
+g058.jpg: 	Time Taken: 0:00:09.258946		Banana Size: 151772 pixels
+
+g059.jpg: 	Time Taken: 0:00:09.177499		Banana Size: 143153 pixels
+
+g060.jpg: 	Time Taken: 0:00:09.143258		Banana Size: 156422 pixels
+
+g061.jpg: 	Time Taken: 0:00:09.343828		Banana Size: 166730 pixels
+
+g062.jpg: 	Time Taken: 0:00:09.656703		Banana Size: 125458 pixels
+
+g063.jpg: 	Time Taken: 0:00:09.310071		Banana Size: 145158 pixels
+
+g064.jpg: 	Time Taken: 0:00:09.259965		Banana Size: 155353 pixels
+
+g065.jpg: 	Time Taken: 0:00:09.245476		Banana Size: 161839 pixels
+
+g066.jpg: 	Time Taken: 0:00:09.505896		Banana Size: 143640 pixels
+
+g067.jpg: 	Time Taken: 0:00:09.272711		Banana Size: 151012 pixels
+
+g068.jpg: 	Time Taken: 0:00:09.245533		Banana Size: 156366 pixels
+
+g069.jpg: 	Time Taken: 0:00:09.694799		Banana Size: 154000 pixels
+
+g070.jpg: 	Time Taken: 0:00:09.436219		Banana Size: 170446 pixels
+
+g071.jpg: 	Time Taken: 0:00:10.121850		Banana Size: 149852 pixels
+
+g072.jpg: 	Time Taken: 0:00:09.222560		Banana Size: 137542 pixels
+
+g073.jpg: 	Time Taken: 0:00:09.261407		Banana Size: 159292 pixels
+
+g074.jpg: 	Time Taken: 0:00:09.213415		Banana Size: 140132 pixels
+
+g075.jpg: 	Time Taken: 0:00:09.179552		Banana Size: 142302 pixels
+
+g076.jpg: 	Time Taken: 0:00:09.796273		Banana Size: 144738 pixels
+
+g077.jpg: 	Time Taken: 0:00:09.569325		Banana Size: 126902 pixels
+
+g078.jpg: 	Time Taken: 0:00:09.118940		Banana Size: 158469 pixels
+
+g079.jpg: 	Time Taken: 0:00:09.531713		Banana Size: 154743 pixels
+
+g080.jpg: 	Time Taken: 0:00:09.500659		Banana Size: 142650 pixels
+
+g081.jpg: 	Time Taken: 0:00:09.193344		Banana Size: 133559 pixels
+
+g082.jpg: 	Time Taken: 0:00:09.115004		Banana Size: 143725 pixels
+
+g083.jpg: 	Time Taken: 0:00:09.259126		Banana Size: 141767 pixels
+
+g084.jpg: 	Time Taken: 0:00:09.985501		Banana Size: 141065 pixels
+
+g085.jpg: 	Time Taken: 0:00:09.949162		Banana Size: 149354 pixels
+
+g086.jpg: 	Time Taken: 0:00:09.528927		Banana Size: 151588 pixels
+
+g087.jpg: 	Time Taken: 0:00:08.513701		Banana Size: 151843 pixels
+
+g088.jpg: 	Time Taken: 0:00:09.926559		Banana Size: 170578 pixels
+
+g089.jpg: 	Time Taken: 0:00:09.717350		Banana Size: 152044 pixels
+
+g090.jpg: 	Time Taken: 0:00:10.399419		Banana Size: 146397 pixels
+
+g091.jpg: 	Time Taken: 0:00:09.508544		Banana Size: 173111 pixels
+
+g092.jpg: 	Time Taken: 0:00:09.796394		Banana Size: 149194 pixels
+
+g093.jpg: 	Time Taken: 0:00:09.264793		Banana Size: 165599 pixels
+
+g094.jpg: 	Time Taken: 0:00:09.038542		Banana Size: 143298 pixels
+
+g095.jpg: 	Time Taken: 0:00:09.135778		Banana Size: 144752 pixels
+
+g096.jpg: 	Time Taken: 0:00:09.119812		Banana Size: 143571 pixels
+
+g097.jpg: 	Time Taken: 0:00:10.911618		Banana Size: 147618 pixels
+
+g098.jpg: 	Time Taken: 0:00:11.773193		Banana Size: 174117 pixels
+
+g099.jpg: 	Time Taken: 0:00:09.449526		Banana Size: 165110 pixels
+
+g100.jpg: 	Time Taken: 0:00:09.617496		Banana Size: 158393 pixels
+
+g101.jpg: 	Time Taken: 0:00:09.369251		Banana Size: 175120 pixels
+
+g102.jpg: 	Time Taken: 0:00:09.839907		Banana Size: 152730 pixels
+
+g103.jpg: 	Time Taken: 0:00:09.213154		Banana Size: 148943 pixels
+
+g104.jpg: 	Time Taken: 0:00:09.081019		Banana Size: 146265 pixels
+
+l001.jpg: 	Time Taken: 0:00:26.816080		Banana Size: 626739 pixels
+
+lotsofBananas.jpg: 	Time Taken: 0:00:05.232916		Banana Size: 117382 pixels
+
+m001.jpg: 	Time Taken: 0:00:09.361811		Banana Size: 168328 pixels
+
+m002.jpg: 	Time Taken: 0:00:09.255595		Banana Size: 139487 pixels
+
+m003.jpg: 	Time Taken: 0:00:09.343064		Banana Size: 164858 pixels
+
+m004.jpg: 	Time Taken: 0:00:09.249535		Banana Size: 156043 pixels
+
+m005.jpg: 	Time Taken: 0:00:09.228415		Banana Size: 141763 pixels
+
+m006.jpg: 	Time Taken: 0:00:09.077480		Banana Size: 162674 pixels
+
+m007.jpg: 	Time Taken: 0:00:09.315571		Banana Size: 155392 pixels
+
+m008.jpg: 	Time Taken: 0:00:09.235699		Banana Size: 143257 pixels
+
+m009.jpg: 	Time Taken: 0:00:09.165062		Banana Size: 145684 pixels
+
+m010.jpg: 	Time Taken: 0:00:09.214301		Banana Size: 135716 pixels
+
+m011.jpg: 	Time Taken: 0:00:09.201109		Banana Size: 152462 pixels
+
+m012.jpg: 	Time Taken: 0:00:08.981532		Banana Size: 132922 pixels
+
+m013.jpg: 	Time Taken: 0:00:08.732186		Banana Size: 125297 pixels
+
+m014.jpg: 	Time Taken: 0:00:08.860924		Banana Size: 127426 pixels
+
+m015.jpg: 	Time Taken: 0:00:09.123630		Banana Size: 148649 pixels
+
+m016.jpg: 	Time Taken: 0:00:09.027697		Banana Size: 148567 pixels
+
+m017.jpg: 	Time Taken: 0:00:09.176901		Banana Size: 143030 pixels
+
+m018.jpg: 	Time Taken: 0:00:09.012484		Banana Size: 140838 pixels
+
+m019.jpg: 	Time Taken: 0:00:09.075076		Banana Size: 143505 pixels
+
+m020.jpg: 	Time Taken: 0:00:08.976147		Banana Size: 108762 pixels
+
+m021.jpg: 	Time Taken: 0:00:09.103253		Banana Size: 140012 pixels
+
+m022.jpg: 	Time Taken: 0:00:09.165246		Banana Size: 113836 pixels
+
+m023.jpg: 	Time Taken: 0:00:09.083896		Banana Size: 165303 pixels
+
+m024.jpg: 	Time Taken: 0:00:09.131086		Banana Size: 150805 pixels
+
+m025.jpg: 	Time Taken: 0:00:09.220982		Banana Size: 157120 pixels
+
+m026.jpg: 	Time Taken: 0:00:09.004574		Banana Size: 136682 pixels
+
+m027.jpg: 	Time Taken: 0:00:09.085937		Banana Size: 152037 pixels
+
+m028.jpg: 	Time Taken: 0:00:09.154255		Banana Size: 152037 pixels
+
+m029.jpg: 	Time Taken: 0:00:08.962206		Banana Size: 140309 pixels
+
+m030.jpg: 	Time Taken: 0:00:09.064351		Banana Size: 162755 pixels
+
+m031.jpg: 	Time Taken: 0:00:09.066896		Banana Size: 154182 pixels
+
+m032.jpg: 	Time Taken: 0:00:09.092231		Banana Size: 125179 pixels
+
+m033.jpg: 	Time Taken: 0:00:09.076171		Banana Size: 145783 pixels
+
+m034.jpg: 	Time Taken: 0:00:09.101633		Banana Size: 168578 pixels
+
+m035.jpg: 	Time Taken: 0:00:09.064479		Banana Size: 124154 pixels
+
+m036.jpg: 	Time Taken: 0:00:08.787232		Banana Size: 136989 pixels
+
+m037.jpg: 	Time Taken: 0:00:09.087224		Banana Size: 157332 pixels
+
+m038.jpg: 	Time Taken: 0:00:09.042454		Banana Size: 127532 pixels
+
+m039.jpg: 	Time Taken: 0:00:09.015687		Banana Size: 131190 pixels
+
+m040.jpg: 	Time Taken: 0:00:09.019917		Banana Size: 128913 pixels
+
+m041.jpg: 	Time Taken: 0:00:09.066485		Banana Size: 119946 pixels
+
+m042.jpg: 	Time Taken: 0:00:08.922034		Banana Size: 117909 pixels
+
+m043.jpg: 	Time Taken: 0:00:08.994433		Banana Size: 161634 pixels
+
+m044.jpg: 	Time Taken: 0:00:09.090337		Banana Size: 132045 pixels
+
+m045.jpg: 	Time Taken: 0:00:08.955368		Banana Size: 120829 pixels
+
+m046.jpg: 	Time Taken: 0:00:09.176850		Banana Size: 129164 pixels
+
+m047.jpg: 	Time Taken: 0:00:09.082070		Banana Size: 147270 pixels
+
+m048.jpg: 	Time Taken: 0:00:08.839998		Banana Size: 131853 pixels
+
+m049.jpg: 	Time Taken: 0:00:09.018381		Banana Size: 119422 pixels
+
+m050.jpg: 	Time Taken: 0:00:08.998234		Banana Size: 134705 pixels
+
+m051.jpg: 	Time Taken: 0:00:09.158478		Banana Size: 149942 pixels
+
+m052.jpg: 	Time Taken: 0:00:09.306985		Banana Size: 139385 pixels
+
+m053.jpg: 	Time Taken: 0:00:09.100146		Banana Size: 168180 pixels
+
+m054.jpg: 	Time Taken: 0:00:09.097483		Banana Size: 144359 pixels
+
+m055.jpg: 	Time Taken: 0:00:09.244359		Banana Size: 138855 pixels
+
+m056.jpg: 	Time Taken: 0:00:09.098199		Banana Size: 140792 pixels
+
+m057.jpg: 	Time Taken: 0:00:08.977101		Banana Size: 127132 pixels
+
+m058.jpg: 	Time Taken: 0:00:09.018811		Banana Size: 134064 pixels
+
+m059.jpg: 	Time Taken: 0:00:09.055822		Banana Size: 121633 pixels
+
+m060.jpg: 	Time Taken: 0:00:09.018322		Banana Size: 147106 pixels
+
+m061.jpg: 	Time Taken: 0:00:09.039601		Banana Size: 162482 pixels
+
+m062.jpg: 	Time Taken: 0:00:08.971444		Banana Size: 160165 pixels
+
+m063.jpg: 	Time Taken: 0:00:09.031231		Banana Size: 184106 pixels
+
+m064.jpg: 	Time Taken: 0:00:09.059268		Banana Size: 151917 pixels
+
+m065.jpg: 	Time Taken: 0:00:08.968829		Banana Size: 164657 pixels
+
+m066.jpg: 	Time Taken: 0:00:09.049412		Banana Size: 157233 pixels
+
+m067.jpg: 	Time Taken: 0:00:09.047782		Banana Size: 163092 pixels
+
+m068.jpg: 	Time Taken: 0:00:08.969111		Banana Size: 151610 pixels
+
+m069.jpg: 	Time Taken: 0:00:09.044094		Banana Size: 177287 pixels
+
+m070.jpg: 	Time Taken: 0:00:09.110342		Banana Size: 149210 pixels
+
+m071.jpg: 	Time Taken: 0:00:08.978944		Banana Size: 162813 pixels
+
+m072.jpg: 	Time Taken: 0:00:09.345826		Banana Size: 165546 pixels
+
+m073.jpg: 	Time Taken: 0:00:09.284035		Banana Size: 178533 pixels
+
+m074.jpg: 	Time Taken: 0:00:09.558154		Banana Size: 135327 pixels
+
+m075.jpg: 	Time Taken: 0:00:09.321215		Banana Size: 133382 pixels
+
+m076.jpg: 	Time Taken: 0:00:09.587676		Banana Size: 126975 pixels
+
+m077.jpg: 	Time Taken: 0:00:09.661769		Banana Size: 157653 pixels
+
+m078.jpg: 	Time Taken: 0:00:09.472813		Banana Size: 178168 pixels
+
+m079.jpg: 	Time Taken: 0:00:09.568283		Banana Size: 152292 pixels
+
+m080.jpg: 	Time Taken: 0:00:09.496402		Banana Size: 162051 pixels
+
+m081.jpg: 	Time Taken: 0:00:09.680694		Banana Size: 154485 pixels
+
+m082.jpg: 	Time Taken: 0:00:11.263535		Banana Size: 158497 pixels
+
+m083.jpg: 	Time Taken: 0:00:09.797434		Banana Size: 166715 pixels
+
+m084.jpg: 	Time Taken: 0:00:09.413080		Banana Size: 152634 pixels
+
+m085.jpg: 	Time Taken: 0:00:09.352492		Banana Size: 130267 pixels
+
+m086.jpg: 	Time Taken: 0:00:09.497133		Banana Size: 140362 pixels
+
+m087.jpg: 	Time Taken: 0:00:09.401426		Banana Size: 136260 pixels
+
+m088.jpg: 	Time Taken: 0:00:09.654877		Banana Size: 143742 pixels
+
+testBanana.jpg: 	Time Taken: 0:00:09.598214		Banana Size: 140362 pixels
+
+uglyBanana.jpg: 	Time Taken: 0:00:09.406736		Banana Size: 81035 pixels
+
+v001.jpg: 	Time Taken: 0:00:09.469096		Banana Size: 142505 pixels
+
+v002.jpg: 	Time Taken: 0:00:09.442534		Banana Size: 118123 pixels
+
+v003.jpg: 	Time Taken: 0:00:09.424403		Banana Size: 124554 pixels
+
+v004.jpg: 	Time Taken: 0:00:09.466241		Banana Size: 112781 pixels
+
+v005.jpg: 	Time Taken: 0:00:09.401524		Banana Size: 160525 pixels
+
+v006.jpg: 	Time Taken: 0:00:09.442703		Banana Size: 101955 pixels
+
+v007.jpg: 	Time Taken: 0:00:09.297545		Banana Size: 53603 pixels
+
+v008.jpg: 	Time Taken: 0:00:10.998920		Banana Size: 134376 pixels
+
+v009.jpg: 	Time Taken: 0:00:09.611320		Banana Size: 133930 pixels
+
+v010.jpg: 	Time Taken: 0:00:09.348087		Banana Size: 110967 pixels
+
+v011.jpg: 	Time Taken: 0:00:09.349635		Banana Size: 73247 pixels
+
+v012.jpg: 	Time Taken: 0:00:09.318004		Banana Size: 114734 pixels
+
+v013.jpg: 	Time Taken: 0:00:09.697440		Banana Size: 124441 pixels
+
+v014.jpg: 	Time Taken: 0:00:08.966904		Banana Size: 101955 pixels
+
+v015.jpg: 	Time Taken: 0:00:09.875718		Banana Size: 117136 pixels
+
+v016.jpg: 	Time Taken: 0:00:09.035192		Banana Size: 130902 pixels
+
+v017.jpg: 	Time Taken: 0:00:09.301532		Banana Size: 115261 pixels
+
+v018.jpg: 	Time Taken: 0:00:09.546041		Banana Size: 160525 pixels
+
+v019.jpg: 	Time Taken: 0:00:10.091043		Banana Size: 65099 pixels
+
+v020.jpg: 	Time Taken: 0:00:09.470547		Banana Size: 108433 pixels
+
+v021.jpg: 	Time Taken: 0:00:09.254837		Banana Size: 79459 pixels
+
+v022.jpg: 	Time Taken: 0:00:11.157945		Banana Size: 92309 pixels
+
+v023.jpg: 	Time Taken: 0:00:09.461112		Banana Size: 67526 pixels
+
+v024.jpg: 	Time Taken: 0:00:09.611603		Banana Size: 93547 pixels
+
+v025.jpg: 	Time Taken: 0:00:10.874583		Banana Size: 77964 pixels
+
+v026.jpg: 	Time Taken: 0:00:09.080048		Banana Size: 86500 pixels
+
+v027.jpg: 	Time Taken: 0:00:08.674554		Banana Size: 81035 pixels
+
+v028.jpg: 	Time Taken: 0:00:07.875826		Banana Size: 84702 pixels
+
+v029.jpg: 	Time Taken: 0:00:08.774575		Banana Size: 110967 pixels
+
+v030.jpg: 	Time Taken: 0:00:10.048387		Banana Size: 73247 pixels
+
+v031.jpg: 	Time Taken: 0:00:10.236073		Banana Size: 107451 pixels
+
+v032.jpg: 	Time Taken: 0:00:09.940945		Banana Size: 87337 pixels
+
+v033.jpg: 	Time Taken: 0:00:09.777980		Banana Size: 88200 pixels
+
+y001.jpg: 	Time Taken: 0:00:10.015808		Banana Size: 163815 pixels
+
+y002.jpg: 	Time Taken: 0:00:10.141333		Banana Size: 176412 pixels
+
+y003.jpg: 	Time Taken: 0:00:09.473210		Banana Size: 168875 pixels
+
+y004.jpg: 	Time Taken: 0:00:09.924707		Banana Size: 183513 pixels
+
+y005.jpg: 	Time Taken: 0:00:09.661436		Banana Size: 170938 pixels
+
+y006.jpg: 	Time Taken: 0:00:09.426528		Banana Size: 162840 pixels
+
+y007.jpg: 	Time Taken: 0:00:09.315235		Banana Size: 141275 pixels
+
+y008.jpg: 	Time Taken: 0:00:09.748822		Banana Size: 172903 pixels
+
+y009.jpg: 	Time Taken: 0:00:10.087186		Banana Size: 135402 pixels
+
+y010.jpg: 	Time Taken: 0:00:10.166478		Banana Size: 188920 pixels
+
+y011.jpg: 	Time Taken: 0:00:09.426486		Banana Size: 152390 pixels
+
+y012.jpg: 	Time Taken: 0:00:09.799960		Banana Size: 168853 pixels
+
+y013.jpg: 	Time Taken: 0:00:09.748746		Banana Size: 167624 pixels
+
+y014.jpg: 	Time Taken: 0:00:09.356682		Banana Size: 158824 pixels
+
+y015.jpg: 	Time Taken: 0:00:09.318943		Banana Size: 152156 pixels
+
+y016.jpg: 	Time Taken: 0:00:09.328786		Banana Size: 166996 pixels
+
+y017.jpg: 	Time Taken: 0:00:09.602354		Banana Size: 182889 pixels
+
+y018.jpg: 	Time Taken: 0:00:09.603773		Banana Size: 137929 pixels
+
+y019.jpg: 	Time Taken: 0:00:09.332301		Banana Size: 174095 pixels
+
+y020.jpg: 	Time Taken: 0:00:09.704301		Banana Size: 193942 pixels
+
+y021.jpg: 	Time Taken: 0:00:09.563117		Banana Size: 178938 pixels
+
+y022.jpg: 	Time Taken: 0:00:10.365135		Banana Size: 150618 pixels
+
+y023.jpg: 	Time Taken: 0:00:11.143721		Banana Size: 185489 pixels
+
+y024.jpg: 	Time Taken: 0:00:10.490339		Banana Size: 167830 pixels
+
+y025.jpg: 	Time Taken: 0:00:09.279845		Banana Size: 161466 pixels
+
+y026.jpg: 	Time Taken: 0:00:09.108859		Banana Size: 177928 pixels
+
+y027.jpg: 	Time Taken: 0:00:11.881325		Banana Size: 148199 pixels
+
+y028.jpg: 	Time Taken: 0:00:10.280949		Banana Size: 189469 pixels
+
+y029.jpg: 	Time Taken: 0:00:11.171157		Banana Size: 178628 pixels
+
+y030.jpg: 	Time Taken: 0:00:10.827298		Banana Size: 183830 pixels
+
+y031.jpg: 	Time Taken: 0:00:13.184432		Banana Size: 186502 pixels
+
+y032.jpg: 	Time Taken: 0:00:11.889372		Banana Size: 165260 pixels
+
+y033.jpg: 	Time Taken: 0:00:14.830000		Banana Size: 154903 pixels
+
+y034.jpg: 	Time Taken: 0:00:15.701324		Banana Size: 182868 pixels
+
+y035.jpg: 	Time Taken: 0:00:18.722162		Banana Size: 188348 pixels
+
+y036.jpg: 	Time Taken: 0:00:13.135611		Banana Size: 172310 pixels
+
+y037.jpg: 	Time Taken: 0:00:14.021145		Banana Size: 162414 pixels
+
+y038.jpg: 	Time Taken: 0:00:13.094884		Banana Size: 172568 pixels
+
+y039.jpg: 	Time Taken: 0:00:09.755085		Banana Size: 198632 pixels
+
+y040.jpg: 	Time Taken: 0:00:09.997690		Banana Size: 178347 pixels
+
+y041.jpg: 	Time Taken: 0:00:09.621775		Banana Size: 169727 pixels
+
+y042.jpg: 	Time Taken: 0:00:09.586011		Banana Size: 139663 pixels
+
+y043.jpg: 	Time Taken: 0:00:09.504236		Banana Size: 155689 pixels
+
+y044.jpg: 	Time Taken: 0:00:10.333779		Banana Size: 138794 pixels
+
+y045.jpg: 	Time Taken: 0:00:10.573669		Banana Size: 138921 pixels
+
+y046.jpg: 	Time Taken: 0:00:09.294029		Banana Size: 179156 pixels
+
+y047.jpg: 	Time Taken: 0:00:12.264137		Banana Size: 196198 pixels
+
+y048.jpg: 	Time Taken: 0:00:11.693134		Banana Size: 197559 pixels
+
