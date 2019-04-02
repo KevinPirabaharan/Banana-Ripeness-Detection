@@ -45,18 +45,10 @@ def imageSegment(imagePath, imageName, output):
     bananaSA = 0
 
     #find the otsu threshold of the red channel and then binarized LAB image into a black and white image
-    #the pixels of the banana should be black (0), whilst the rest of the image should be white (255)
+    #the pixels of the banana should be white (255), whilst the rest of the image should be white (0)
     thr = otsu(red)
     imgRedOtsu = im2bw(red,thr)
     imwrite_gray("Red2.jpeg", imgRedOtsu)
-
-    thr = otsu(green)
-    imgGreenOtsu = im2bw(green,thr)
-    imwrite_gray("Green2.jpeg", imgGreenOtsu)
-
-    thr = otsu(blue)
-    imgBlueOtsu = im2bw(blue,thr)
-    imwrite_gray("Blue2.jpeg", imgBlueOtsu)
 
     red, green, blue = imread_colour(imagePath)
 
