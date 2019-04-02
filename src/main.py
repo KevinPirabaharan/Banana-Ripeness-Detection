@@ -198,13 +198,13 @@ def brownSpotAnalysis(bananaSize,imagePath):
     brown_spot = 0
     for i in range(im.shape[0]):
         for j in range(im.shape[1]):
-            if difference(lab_color[i, j][0], lab_color[i, j][1]) > 10 and difference(lab_color[i, j][1], lab_color[i, j][2]) > 10: # it is brown spot
+            if difference(lab_color[i, j][0], lab_color[i, j][1]) < 25 and difference(lab_color[i, j][1], lab_color[i, j][2]) < 25: # it is brown spot
                 im[i, j][0] = 255
                 im[i, j][1] = 255
                 im[i, j][2] = 255
                 brown_spot += 1
-    misc.imsave("../images/brownSpot/ripeWholeTest.png", im)
-    print"brown spot " + str(brown_spot/bananaSize)
+    misc.imsave("../images/brownSpot/v001Test.png", im)
+    print"brown spot " + str(float(brown_spot)/float(bananaSize))
     pass
 
 #Program loop to run the program

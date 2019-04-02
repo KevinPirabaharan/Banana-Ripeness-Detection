@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="48e47e44-b1a7-460a-99cb-d0966d165d81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/processed/bananaIm.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/processed/bananaIm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/processed/brownspotmask.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/processed/brownspotmask.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/processed/gray.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/processed/gray.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/processed/lab.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/processed/lab.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/brownSpot/ripeWholeTest.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/brownSpot/ripeWholeTest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Red2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Red2.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hsv.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/hsv.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imthr_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/imthr_lib.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="204" column="31" lean-forward="true" selection-start-line="204" selection-start-column="31" selection-end-line="204" selection-end-column="31" />
+            <state relative-caret-position="153">
+              <caret line="228" column="26" lean-forward="true" selection-start-line="228" selection-start-column="26" selection-end-line="228" selection-end-column="26" />
               <folding>
                 <element signature="e#223#244#0" expanded="true" />
               </folding>
@@ -32,47 +29,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/brownSpot/ripeWholeTest.png">
+        <entry file="file://$PROJECT_DIR$/images/raw/g016.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/raw/ripeWhole.jpg">
+        <entry file="file://$PROJECT_DIR$/images/raw/g008.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/brownSpot/g089Test.png">
+        <entry file="file://$PROJECT_DIR$/images/raw/g015.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/brownSpot/m036Test.png">
+        <entry file="file://$PROJECT_DIR$/images/raw/g003.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/raw/g082.jpg">
+        <entry file="file://$PROJECT_DIR$/images/raw/g031.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/raw/g089.jpg">
+        <entry file="file://$PROJECT_DIR$/images/raw/g017.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/brownSpot/bananaTest.png">
+        <entry file="file://$PROJECT_DIR$/images/raw/g035.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/raw/y021.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/raw/v010.jpg">
+        <entry file="file://$PROJECT_DIR$/images/raw/v001.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
@@ -260,15 +252,31 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15287296" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Python Console" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/segmentationResults.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-114" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/raw/v001.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/processed/g017.png">
       <provider selected="true" editor-type-id="images" />
@@ -287,13 +295,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/brown_spot.py" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="198" column="25" selection-start-line="198" selection-start-column="25" selection-end-line="198" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/processed/g001.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -361,16 +362,62 @@
     <entry file="file://$PROJECT_DIR$/images/brownSpot/g089Test.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="198" column="22" selection-start-line="198" selection-start-column="22" selection-end-line="198" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/m081.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/m061.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/m072.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/brownSpot/m072Test.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/images/raw/ripeWhole.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/v001.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/g008.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/g015.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/g003.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/g031.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/g035.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/brownSpot/v001Test.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/brownSpot/ripeWholeTest.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/g016.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/raw/g017.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="204" column="31" lean-forward="true" selection-start-line="204" selection-start-column="31" selection-end-line="204" selection-end-column="31" />
+        <state relative-caret-position="153">
+          <caret line="228" column="26" lean-forward="true" selection-start-line="228" selection-start-column="26" selection-end-line="228" selection-end-column="26" />
           <folding>
             <element signature="e#223#244#0" expanded="true" />
           </folding>
