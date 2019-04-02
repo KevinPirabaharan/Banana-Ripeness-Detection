@@ -17,10 +17,10 @@ import matplotlib.image as mpimg
 from skimage import color
 from skimage import io
 from scipy import ndimage, misc
-import matplotlib.cm as cm #
+import matplotlib.cm as cm
 from scipy import misc
 import numpy as np
-import matplotlib.pyplot as plt # import
+import matplotlib.pyplot as plt
 
 banCount = 0.0
 brownSpot = 0.0
@@ -62,13 +62,13 @@ def imageSegment(imagePath, imageName, output):
     #the pixels of the banana should be white (255), whilst the rest of the image should be white (0)
     thr = otsu(red)
     imgRedOtsu = im2bw(red,thr)
-    imwrite_gray("Red2.jpeg", imgRedOtsu)
+    #imwrite_gray("Red2.jpeg", imgRedOtsu)
 
     red, green, blue = imread_colour(imagePath)
 
     #the Black and White image is looked at pixel by pixel
-    #the white pixels of the the image are saved as the color of the original image, whilst the rest of the image is saved as black pixels
-    #this allows the banana to keep it's color while the rest of the image is blackenes
+    #the white pixels of the the image are saved as the color of the original image, whilst the rest of the image is saved as white pixels
+    #this allows the banana to keep it's color while the rest of the image is whiteness
     for i in range(0, width-1):
         for j in range(0, height-1):
             avg = (float(red[i,j]) + float(blue[i,j]) + float(green[i,j])) / 3
@@ -78,9 +78,9 @@ def imageSegment(imagePath, imageName, output):
                 blueB[i,j] = blue[i,j]
                 bananaSA += 1
             else:
-                redB[i,j] = 0
-                greenB[i,j] = 0
-                blueB[i,j] = 0
+                redB[i,j] = 255
+                greenB[i,j] = 255
+                blueB[i,j] = 255
 
     #image is saved and total time taken, total pixel size are all written to a text file
     imwrite_colour("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png', redB, greenB, blueB)
