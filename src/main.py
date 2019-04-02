@@ -47,24 +47,17 @@ def imageSegment(imagePath, imageName, output):
     startDT = datetime.datetime.now()
     im = Image.open(imagePath)
     #initialize color channels and size variables
-<<<<<<< HEAD
     im = Image.open(imagePath)
     height, width = im.size
     img = cv2.imread(imagePath)
     HSV = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
     cv2.imwrite('hsv.jpg',HSV)
     red, green, blue = imread_colour('hsv.jpg')
-=======
-    height, width = im.size
-
-    red, green, blue = imread_colour(imagePath)
->>>>>>> brown-analysis
     redB = np.zeros((width,height))
     greenB = np.zeros((width,height))
     blueB = np.zeros((width,height))
     bananaSA = 0
 
-<<<<<<< HEAD
     #find the otsu threshold of the red channel and then binarized LAB image into a black and white image
     #the pixels of the banana should be white (255), whilst the rest of the image should be white (0)
     thr = otsu(red)
@@ -72,13 +65,6 @@ def imageSegment(imagePath, imageName, output):
     imwrite_gray("Red2.jpeg", imgRedOtsu)
 
     red, green, blue = imread_colour(imagePath)
-=======
-    #find the otsu threshold of the blue channel and then binarized into a black and white image
-    #the pixels of the banana should be black (0), whilst the rest of the image should be white (255)
-    thr = otsu(blue)
-    imgBlueOtsu = im2bw(blue,thr)
-    bananaSA = 0
->>>>>>> brown-analysis
 
     #the Black and White image is looked at pixel by pixel
     #the white pixels of the the image are saved as the color of the original image, whilst the rest of the image is saved as black pixels
@@ -217,6 +203,7 @@ while (progExit == False):
             print("")
             fname = os.path.basename(file)
             bananaSize = imageSegment(file, fname, data)
+            brownSpotAnalysis(bananaSize,inputFolder + fileName,fileName);
             loadingBar(fileCount,len(glob.glob(inputFolder + "*.jpg")),2)
         data.close()
 
