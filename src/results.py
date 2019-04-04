@@ -35,18 +35,24 @@ for file in glob.glob(inputFolder + "*.txt"):
     fileCount += 1
     fname = os.path.basename(file)
     print("")
+    avg = 0
+    MAX = 0
+    MIN = 0
     f = open(file, "r")
-    for x in f:
-        if (len(x) > 90):
-            offset = 99 - len(x)
-            if (is_number(x[83-offset:88-offset])):
-                it = float(x[83-offset:88-offset])
-                lists.append(it)
-    avg = sum(lists) / float(len(lists))
-    MAX = max(lists)
-    MIN = min(lists)
 
-    print(file + ": \t avg = " + str(avg) + "\t Max: " + str(MAX) + "\t Min: " + str(MIN))
-    f.write(file + ": \t avg = " + str(avg) + "\t Max: " + str(MAX) + "\t Min: " + str(MIN))
+    for x in f:
+        if (len(x) > 80):
+            offset = 87 - len(x)
+            # print(x[70-offset:81-offset])
+            if (is_number(x[70-offset:81-offset])):
+                it = float(x[70-offset:81-offset])
+                lists.append(it)
+    # print(str(lists) + "\n size is: " + str(len(lists)))
+    if(len(lists) > 0):
+        avg = sum(lists) / float(len(lists))
+        MAX = max(lists)
+        MIN = min(lists)
+        print(file + ": \t avg = " + str(avg) + "\t Max: " + str(MAX) + "\t Min: " + str(MIN))
+        data.write(file + ": \t avg = " + str(avg) + "\t Max: " + str(MAX) + "\t Min: " + str(MIN))
 
 data.close()

@@ -40,7 +40,6 @@ def loadingBar(count,total,size):
 # Parameters:
 # (in)    imagePath, imageName, output :  file path of the image; fileName; datafile to print results of the function
 # (out)   bananaSA                     :  Returns the surface area of the banana in pixels
-#
 def imageSegment(imagePath, imageName, output):
     object = []
     #start timer for the function
@@ -50,12 +49,10 @@ def imageSegment(imagePath, imageName, output):
     im = Image.open(imagePath)
     height, width = im.size
     img = cv2.imread(imagePath)
-
     r, g ,b = imread_colour(imagePath)
     thr = otsu(b)
     imgBlueOtsu = im2bw(b,thr)
-    imwrite_gray("BLUE.jpeg", imgBlueOtsu)
-
+    # imwrite_gray("BLUE.jpeg", imgBlueOtsu)
     HSV = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
     cv2.imwrite('hsv.jpg',HSV)
     red, green, blue = imread_colour('hsv.jpg')
@@ -72,7 +69,6 @@ def imageSegment(imagePath, imageName, output):
     # thr = otsu(red)
     # imgRedOtsu = im2bw(red,thr)
     # # imwrite_gray("Red2.jpeg", imgRedOtsu)
-
     red, green, blue = imread_colour(imagePath)
 
     #the Black and White image is looked at pixel by pixel
@@ -81,17 +77,17 @@ def imageSegment(imagePath, imageName, output):
     for i in range(0, width-1):
         for j in range(0, height-1):
             # avg = (float(red[i,j]) + float(blue[i,j]) + float(green[i,j])) / 3
-            # if (imgRedOtsu[i,j] == 255 ):
-            #     redB[i,j] = red[i,j]
-            #     greenB[i,j] = green[i,j]
-            #     blueB[i,j] = blue[i,j]
-            #     bananaSA += 1
+            # if imgRedOtsu[i,j] == 255:
+            #      redB[i,j] = red[i,j]
+            #      greenB[i,j] = green[i,j]
+            #      blueB[i,j] = blue[i,j]
+            #      bananaSA += 1
             # else:
-            #     redB[i,j] = 255
-            #     greenB[i,j] = 255
-            #     blueB[i,j] = 255
+            #      redB[i,j] = 255
+            #      greenB[i,j] = 255
+            #      blueB[i,j] = 255
 
-            if (imgBlueOtsu[i,j] != 255 ):
+            if imgBlueOtsu[i,j] != 255:
                 rB[i,j] = red[i,j]
                 gB[i,j] = green[i,j]
                 bB[i,j] = blue[i,j]
@@ -102,19 +98,20 @@ def imageSegment(imagePath, imageName, output):
                 bB[i,j] = 255
 
     #image is saved and total time taken, total pixel size are all written to a text file
-    # imwrite_colour("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png', redB, greenB, blueB)
+    #imwrite_colour("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png', redB, greenB, blueB)
     imwrite_colour("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png', rB, gB, bB)
-
     endDT = datetime.datetime.now()
     currentDT = endDT - startDT
     output.write(imageName + ": \tTime Taken: " + str(currentDT) + "\tBanana Size: " + str(bananaSA) + "\t")
     object.append(bananaSA)
     object.append("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png')
     #Returns the surface area of the banana for BrownSpot Analysis
-    print (bananaSA)
+    print (imageName + "\t - \t" + str(bananaSA) + "\n")
     return object
 
 def ColorAnaysis(imagePath):
+
+
     pass
 
 
@@ -207,7 +204,6 @@ def brownSpotAnalysis(bananaSize,imagePath,imageName):
     # misc.imsave("../images/processed/brownSpotsimage.png",brownSpotsIm);
     misc.imsave("../images/processed/bananaIm.png",bananaIm);
 """
-
 def difference(a,b):
     diff = abs(a-b)
     return diff
@@ -219,14 +215,30 @@ def brownSpotAnalysis(bananaSize,imagePath, output):
     brown_spot = 0
     for i in range(im.shape[0]):
         for j in range(im.shape[1]):
-            if difference(int(lab_color[i, j][0]), int(lab_color[i, j][1])) > 10 and difference(lab_color[i, j][1], lab_color[i, j][2]) > 10: # it is brown spot
-                im[i, j][0] = 0
-                im[i, j][1] = 0
-                im[i, j][2] = 0
-                brown_spot += 1
-    misc.imsave("../images/brownSpot/brownSpot_" + os.path.basename(imagePath), im)
-    print"brown spot " + str((float(brown_spot)/float(bananaSize)) * 100) + " %"
-    output.write(" Brown Spot Percentage = " + str((float(brown_spot)/float(bananaSize)) * 100) + " %\n\n\n")
+            if difference(lab_color[i, j][0], lab_color[i, j][1]) < 25 and difference(lab_color[i, j][1], lab_color[i, j][2]) < 25: # it is brown spot
+                if im[i, j][0] != 255 and im[i, j][1] != 255 and im[i, j][2] != 255:
+                    im[i, j][0] = 255
+                    im[i, j][1] = 255
+                    im[i, j][2] = 255
+                    brown_spot += 1
+
+    brown = ((float(brown_spot) / float(bananaSize)) * 100)
+    brown_percent = str(brown) + " %"
+    print(brown)
+    if (brown > 0.00 and brown < 18.00):
+        misc.imsave("../images/brownSpot/yellowed/brownSpot_" + os.path.basename(imagePath), im)
+    elif (brown >= 18.00 and brown < 47.00):
+        misc.imsave("../images/brownSpot/ripe/brownSpot_" + os.path.basename(imagePath), im)
+    elif (brown >= 47.00 and brown < 76.00):
+        misc.imsave("../images/brownSpot/very_Ripe/brownSpot_" + os.path.basename(imagePath), im)
+    elif (brown >= 76.00):
+        print("brown: " + str(brown))
+        misc.imsave("../images/brownSpot/over_Ripe/brownSpot_" + os.path.basename(imagePath), im)
+    else:
+        misc.imsave("../images/brownSpot/not_Banana/brownSpot_" + os.path.basename(imagePath), im)
+
+    output.write("Brown spot: " + brown_percent + "\n")
+    print("Brown spot: " + brown_percent)
     pass
 
 #Program loop to run the program
@@ -242,15 +254,16 @@ while (progExit == False):
         fileName = raw_input("Enter File Name: ")
         obj = imageSegment(inputFolder + fileName, fileName, data2)
         bananaSize = obj[0]
+        print(str(bananaSize))
         brownSpotAnalysis(bananaSize, obj[1]);
 
     elif (inp == 't') or (inp == 'T'):
         print("Testing Algorithms...")
-        data = open("../data/BlueAlgo_unRipeIMGs.txt", 'w')
+        data = open("../data/veryRipe_Results.txt", 'w')
         for file in glob.glob(inputFolder + "*.jpg"):
             fileCount += 1
             fname = os.path.basename(file)
-            if (fname[0] == 'g'):
+            if (fname[0] == 'v'):
                 print("")
                 obj = imageSegment(inputFolder + fname, fname, data)
                 bananaSize = obj[0]
