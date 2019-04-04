@@ -1,0 +1,264 @@
+m001.jpg: 	Time Taken: 0:00:02.885373	Banana Size: 180359	 Brown Spot Percentage = 93.3349597192 %
+
+
+m002.jpg: 	Time Taken: 0:00:02.726736	Banana Size: 152450	 Brown Spot Percentage = 92.5660872417 %
+
+
+m003.jpg: 	Time Taken: 0:00:03.746687	Banana Size: 175382	 Brown Spot Percentage = 95.022864376 %
+
+
+m004.jpg: 	Time Taken: 0:00:03.220607	Banana Size: 173463	 Brown Spot Percentage = 90.624513585 %
+
+
+m005.jpg: 	Time Taken: 0:00:03.447801	Banana Size: 153517	 Brown Spot Percentage = 93.2867369738 %
+
+
+m006.jpg: 	Time Taken: 0:00:03.395083	Banana Size: 180294	 Brown Spot Percentage = 93.1761456288 %
+
+
+m007.jpg: 	Time Taken: 0:00:03.358724	Banana Size: 179856	 Brown Spot Percentage = 79.6720709901 %
+
+
+m008.jpg: 	Time Taken: 0:00:03.294827	Banana Size: 164929	 Brown Spot Percentage = 85.2403155297 %
+
+
+m009.jpg: 	Time Taken: 0:00:03.954782	Banana Size: 179654	 Brown Spot Percentage = 75.919823661 %
+
+
+m010.jpg: 	Time Taken: 0:00:03.709263	Banana Size: 157369	 Brown Spot Percentage = 81.4150182056 %
+
+
+m011.jpg: 	Time Taken: 0:00:03.574718	Banana Size: 169308	 Brown Spot Percentage = 93.0298627354 %
+
+
+m012.jpg: 	Time Taken: 0:00:04.104287	Banana Size: 144539	 Brown Spot Percentage = 93.044091906 %
+
+
+m013.jpg: 	Time Taken: 0:00:05.294290	Banana Size: 137241	 Brown Spot Percentage = 92.1189731931 %
+
+
+m014.jpg: 	Time Taken: 0:00:03.773656	Banana Size: 140181	 Brown Spot Percentage = 89.1711430222 %
+
+
+m015.jpg: 	Time Taken: 0:00:05.077646	Banana Size: 168254	 Brown Spot Percentage = 87.4041627539 %
+
+
+m016.jpg: 	Time Taken: 0:00:04.209428	Banana Size: 175171	 Brown Spot Percentage = 84.517985283 %
+
+
+m017.jpg: 	Time Taken: 0:00:04.198173	Banana Size: 169704	 Brown Spot Percentage = 82.1147409607 %
+
+
+m018.jpg: 	Time Taken: 0:00:05.022648	Banana Size: 159504	 Brown Spot Percentage = 85.7445581302 %
+
+
+m019.jpg: 	Time Taken: 0:00:04.532911	Banana Size: 162081	 Brown Spot Percentage = 89.2856041115 %
+
+
+m020.jpg: 	Time Taken: 0:00:04.709826	Banana Size: 131724	 Brown Spot Percentage = 88.22765783 %
+
+
+m021.jpg: 	Time Taken: 0:00:04.625178	Banana Size: 169233	 Brown Spot Percentage = 85.5187817979 %
+
+
+m022.jpg: 	Time Taken: 0:00:04.267223	Banana Size: 124544	 Brown Spot Percentage = 91.4849370504 %
+
+
+m023.jpg: 	Time Taken: 0:00:04.468658	Banana Size: 182232	 Brown Spot Percentage = 93.9939198384 %
+
+
+m024.jpg: 	Time Taken: 0:00:04.267551	Banana Size: 169323	 Brown Spot Percentage = 88.8432168105 %
+
+
+m025.jpg: 	Time Taken: 0:00:04.676122	Banana Size: 179787	 Brown Spot Percentage = 89.428601623 %
+
+
+m026.jpg: 	Time Taken: 0:00:04.592321	Banana Size: 167052	 Brown Spot Percentage = 86.3802887724 %
+
+
+m027.jpg: 	Time Taken: 0:00:03.734874	Banana Size: 172827	 Brown Spot Percentage = 90.39559791 %
+
+
+m028.jpg: 	Time Taken: 0:00:04.290559	Banana Size: 172827	 Brown Spot Percentage = 90.39559791 %
+
+
+m029.jpg: 	Time Taken: 0:00:04.259622	Banana Size: 165196	 Brown Spot Percentage = 88.8048136759 %
+
+
+m030.jpg: 	Time Taken: 0:00:04.417950	Banana Size: 182623	 Brown Spot Percentage = 88.505281372 %
+
+
+m031.jpg: 	Time Taken: 0:00:04.673988	Banana Size: 171155	 Brown Spot Percentage = 92.2304344016 %
+
+
+m032.jpg: 	Time Taken: 0:00:04.716066	Banana Size: 142348	 Brown Spot Percentage = 93.0613707253 %
+
+
+m033.jpg: 	Time Taken: 0:00:04.343182	Banana Size: 166048	 Brown Spot Percentage = 92.0390489497 %
+
+
+m034.jpg: 	Time Taken: 0:00:04.012896	Banana Size: 184729	 Brown Spot Percentage = 94.6121074655 %
+
+
+m035.jpg: 	Time Taken: 0:00:04.839914	Banana Size: 163101	 Brown Spot Percentage = 80.7383155223 %
+
+
+m036.jpg: 	Time Taken: 0:00:04.372829	Banana Size: 160340	 Brown Spot Percentage = 86.4743669702 %
+
+
+m037.jpg: 	Time Taken: 0:00:04.175523	Banana Size: 173872	 Brown Spot Percentage = 90.4349176406 %
+
+
+m038.jpg: 	Time Taken: 0:00:04.715388	Banana Size: 147895	 Brown Spot Percentage = 92.2877717299 %
+
+
+m039.jpg: 	Time Taken: 0:00:04.202741	Banana Size: 161503	 Brown Spot Percentage = 86.2881804053 %
+
+
+m040.jpg: 	Time Taken: 0:00:04.566323	Banana Size: 155799	 Brown Spot Percentage = 86.9813028325 %
+
+
+m041.jpg: 	Time Taken: 0:00:04.643504	Banana Size: 134181	 Brown Spot Percentage = 93.2665578584 %
+
+
+m042.jpg: 	Time Taken: 0:00:04.379610	Banana Size: 137305	 Brown Spot Percentage = 92.4787880995 %
+
+
+m043.jpg: 	Time Taken: 0:00:04.688778	Banana Size: 174780	 Brown Spot Percentage = 91.1671815997 %
+
+
+m044.jpg: 	Time Taken: 0:00:04.313044	Banana Size: 148045	 Brown Spot Percentage = 89.4059238745 %
+
+
+m045.jpg: 	Time Taken: 0:00:04.425553	Banana Size: 138993	 Brown Spot Percentage = 86.3467944429 %
+
+
+m046.jpg: 	Time Taken: 0:00:04.247600	Banana Size: 148777	 Brown Spot Percentage = 90.8614906874 %
+
+
+m047.jpg: 	Time Taken: 0:00:05.517245	Banana Size: 163687	 Brown Spot Percentage = 93.8669533928 %
+
+
+m048.jpg: 	Time Taken: 0:00:04.071066	Banana Size: 142913	 Brown Spot Percentage = 95.2089732914 %
+
+
+m049.jpg: 	Time Taken: 0:00:04.254334	Banana Size: 133779	 Brown Spot Percentage = 88.1677991314 %
+
+
+m050.jpg: 	Time Taken: 0:00:04.298091	Banana Size: 152525	 Brown Spot Percentage = 92.7939682019 %
+
+
+m051.jpg: 	Time Taken: 0:00:05.061349	Banana Size: 163964	 Brown Spot Percentage = 92.5282379059 %
+
+
+m052.jpg: 	Time Taken: 0:00:04.851380	Banana Size: 150902	 Brown Spot Percentage = 94.6892685319 %
+
+
+m053.jpg: 	Time Taken: 0:00:03.921483	Banana Size: 182654	 Brown Spot Percentage = 94.643424179 %
+
+
+m054.jpg: 	Time Taken: 0:00:04.131144	Banana Size: 158369	 Brown Spot Percentage = 94.7060346406 %
+
+
+m055.jpg: 	Time Taken: 0:00:04.365868	Banana Size: 156528	 Brown Spot Percentage = 83.6802361239 %
+
+
+m056.jpg: 	Time Taken: 0:00:04.605211	Banana Size: 156072	 Brown Spot Percentage = 91.1130760162 %
+
+
+m057.jpg: 	Time Taken: 0:00:04.130994	Banana Size: 142914	 Brown Spot Percentage = 92.8418489441 %
+
+
+m058.jpg: 	Time Taken: 0:00:03.622145	Banana Size: 152555	 Brown Spot Percentage = 89.1881616466 %
+
+
+m059.jpg: 	Time Taken: 0:00:03.847595	Banana Size: 137672	 Brown Spot Percentage = 90.8819513045 %
+
+
+m060.jpg: 	Time Taken: 0:00:03.590081	Banana Size: 159990	 Brown Spot Percentage = 91.4807175448 %
+
+
+m061.jpg: 	Time Taken: 0:00:02.879308	Banana Size: 170025	 Brown Spot Percentage = 97.0251433613 %
+
+
+m062.jpg: 	Time Taken: 0:00:03.102330	Banana Size: 165732	 Brown Spot Percentage = 98.1053749427 %
+
+
+m063.jpg: 	Time Taken: 0:00:03.388346	Banana Size: 192575	 Brown Spot Percentage = 97.409840322 %
+
+
+m064.jpg: 	Time Taken: 0:00:03.337687	Banana Size: 164709	 Brown Spot Percentage = 95.0306297774 %
+
+
+m065.jpg: 	Time Taken: 0:00:03.370995	Banana Size: 176780	 Brown Spot Percentage = 95.7987328883 %
+
+
+m066.jpg: 	Time Taken: 0:00:03.855166	Banana Size: 171731	 Brown Spot Percentage = 93.227780657 %
+
+
+m067.jpg: 	Time Taken: 0:00:03.373388	Banana Size: 175921	 Brown Spot Percentage = 94.4367073857 %
+
+
+m068.jpg: 	Time Taken: 0:00:03.990417	Banana Size: 173068	 Brown Spot Percentage = 85.9425197032 %
+
+
+m069.jpg: 	Time Taken: 0:00:03.864044	Banana Size: 192435	 Brown Spot Percentage = 90.5677241666 %
+
+
+m070.jpg: 	Time Taken: 0:00:04.776339	Banana Size: 165512	 Brown Spot Percentage = 90.3203393107 %
+
+
+m071.jpg: 	Time Taken: 0:00:03.589392	Banana Size: 172728	 Brown Spot Percentage = 95.660228799 %
+
+
+m072.jpg: 	Time Taken: 0:00:03.424529	Banana Size: 187293	 Brown Spot Percentage = 89.8090158201 %
+
+
+m073.jpg: 	Time Taken: 0:00:04.407520	Banana Size: 198082	 Brown Spot Percentage = 90.1576114942 %
+
+
+m074.jpg: 	Time Taken: 0:00:03.384149	Banana Size: 154181	 Brown Spot Percentage = 89.4805455925 %
+
+
+m075.jpg: 	Time Taken: 0:00:03.504069	Banana Size: 142380	 Brown Spot Percentage = 94.9002668914 %
+
+
+m076.jpg: 	Time Taken: 0:00:03.417998	Banana Size: 138050	 Brown Spot Percentage = 89.1024990945 %
+
+
+m077.jpg: 	Time Taken: 0:00:03.359337	Banana Size: 170328	 Brown Spot Percentage = 87.964985205 %
+
+
+m078.jpg: 	Time Taken: 0:00:03.533749	Banana Size: 199591	 Brown Spot Percentage = 91.0532038018 %
+
+
+m079.jpg: 	Time Taken: 0:00:03.962880	Banana Size: 168458	 Brown Spot Percentage = 92.4153201391 %
+
+
+m080.jpg: 	Time Taken: 0:00:03.442626	Banana Size: 185997	 Brown Spot Percentage = 86.6250530923 %
+
+
+m081.jpg: 	Time Taken: 0:00:03.424095	Banana Size: 164137	 Brown Spot Percentage = 93.1983647806 %
+
+
+m082.jpg: 	Time Taken: 0:00:03.753399	Banana Size: 167337	 Brown Spot Percentage = 92.9573256363 %
+
+
+m083.jpg: 	Time Taken: 0:00:03.371629	Banana Size: 173608	 Brown Spot Percentage = 96.9696096954 %
+
+
+m084.jpg: 	Time Taken: 0:00:03.442947	Banana Size: 169054	 Brown Spot Percentage = 93.5967205745 %
+
+
+m085.jpg: 	Time Taken: 0:00:03.636220	Banana Size: 163727	 Brown Spot Percentage = 83.9018610248 %
+
+
+m086.jpg: 	Time Taken: 0:00:03.449863	Banana Size: 155417	 Brown Spot Percentage = 98.2768937761 %
+
+
+m087.jpg: 	Time Taken: 0:00:03.271446	Banana Size: 159228	 Brown Spot Percentage = 96.131333685 %
+
+
+m088.jpg: 	Time Taken: 0:00:03.279680	Banana Size: 157030	 Brown Spot Percentage = 92.9943322932 %
+
+
