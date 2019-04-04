@@ -18,17 +18,35 @@ from scipy import misc
 import numpy as np
 import matplotlib.pyplot as plt # import
 
+
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
 inputFolder = "../data/"
 fileCount = 0
 
 data = open("results_of_Results.txt", 'w')
 for file in glob.glob(inputFolder + "*.txt"):
+    lists = []
     fileCount += 1
     fname = os.path.basename(file)
     print("")
     f = open(file, "r")
     for x in f:
-        if (len(x) > 80):
-            print(x[83:88])
+        if (len(x) > 90):
+            offset = 99 - len(x)
+            if (is_number(x[83-offset:88-offset])):
+                it = float(x[83-offset:88-offset])
+                lists.append(it)
+    avg = sum(lists) / float(len(lists))
+    MAX = max(lists)
+    MIN = min(lists)
+
+    print(file + ": \t avg = " + str(avg) + "\t Max: " + str(MAX) + "\t Min: " + str(MIN))
+    f.write(file + ": \t avg = " + str(avg) + "\t Max: " + str(MAX) + "\t Min: " + str(MIN))
 
 data.close()
