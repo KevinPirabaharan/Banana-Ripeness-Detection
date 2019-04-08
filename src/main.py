@@ -1,11 +1,10 @@
 #Banana Ripeness Detection
-#Kevin Pirabaharan (0946212), Ena So (), Muhammad Jaffar (911)
+#Kevin Pirabaharan (0946212), Ena So (0961375), Muhammad Jaffar (0911910)
 #This program creates segments bananas from images and detects brown spots
 # on the banana to determine the ripeness of the bananas.
 from imageIO import *
 from imthr_lib import*
 from PIL import Image
-import cv2
 import datetime
 import glob
 import os
@@ -17,14 +16,15 @@ import matplotlib.image as mpimg
 from skimage import color
 from skimage import io
 from scipy import ndimage, misc
-import matplotlib.cm as cm #
+import matplotlib.cm as cm 
 from scipy import misc
 import numpy as np
-import matplotlib.pyplot as plt # import
+import matplotlib.pyplot as plt
 
-banCount = 0.0
-brownSpot = 0.0
-# Loading bar function to show progress of tasks
+
+# Function: Loading Bar
+# 
+# Loading bar function to print a visual progress of tasks
 #
 # Parameters:
 # (in)    count,total,size     :  progress so far; total tasks to accomplish; size of loading bar pixels
@@ -33,60 +33,85 @@ def loadingBar(count,total,size):
     percent = float(count)/float(total)*100
     sys.stdout.write("\r" + str(int(count)).rjust(3,'0')+"/"+str(int(total)).rjust(3,'0') + ' [' + '='*int(percent/10)*size + ' '*(10-int(percent/10))*size + ']')
 
+# Function: Difference
+#
+# The function finds the absolute difference between two numbers
+#
+# Parameters:
+# (in)    a,b  :  The two numbers being compared
+# (out)   diff :  Returns the difference of the two inputted numbers
+def difference(a,b):
+    diff = abs(a-b)
+    return diff
+
+# Function: Color Analysis
+#
+# The function takes in an image and determines to output the blue-green channel ranges of the image
+# this ratio will be used to distinguish between green/blue bananas vs other colors
+#
+# Parameters:
+# (in)    brownImagePath :  file path of the image of the segmented image to be color analyzed
+# (out)   avg            :  Returns the average green/blue channel ratio of the image
+def colorAnaysis(brownImagePath):
+    #Declaring varaiables for image attributes
+    r, g ,b = imread_colour(brownImagePath)
+    im = Image.open(brownImagePath)
+    height, width = im.size
+
+    #Using otsu to find banana vs non-banana pixels 
+    thr = otsu(b)
+    imgBlueOtsu = im2bw(b,thr)
+    
+    # Goes through the image pixel by pixel; if the pixel isnt white (background or brownspot)
+    # The ratio of the green-blue channls are added a list, appends 0 to avoid divide by 0 errors
+    ratio = []
+    for i in range(0, width-1):
+        for j in range(0, height-1):
+            if imgBlueOtsu[i,j] != 255:
+                if (b[i,j] > 0):
+                    ratio.append(float(g[i,j] / b[i,j]))
+                else:
+                    ratio.append(0)
+
+    # The average green/blue ratio for the image is calculated and returned
+    # Theoretically, the higher the avg; the greener the image is
+    avg = float(sum(ratio) / len(ratio))
+    return avg
+
 # Function: Image Segmentation
 #
 # The function takes in an image and aims to segment the banana out, exporting a .png with just the bananaand the background turned to black
 #
 # Parameters:
 # (in)    imagePath, imageName, output :  file path of the image; fileName; datafile to print results of the function
-# (out)   bananaSA                     :  Returns the surface area of the banana in pixels
+# (out)   object[bananaSA, filePath]   :  Returns an object containing the banana's total pixel size and the file path of the processed image
 def imageSegment(imagePath, imageName, output):
-    object = []
+    
     #start timer for the function
     startDT = datetime.datetime.now()
-    im = Image.open(imagePath)
+
     #initialize color channels and size variables
+    object = []
     im = Image.open(imagePath)
     height, width = im.size
     img = cv2.imread(imagePath)
     r, g ,b = imread_colour(imagePath)
-    thr = otsu(b)
-    imgBlueOtsu = im2bw(b,thr)
-    # imwrite_gray("BLUE.jpeg", imgBlueOtsu)
-    HSV = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
-    cv2.imwrite('hsv.jpg',HSV)
-    red, green, blue = imread_colour('hsv.jpg')
-    redB = np.zeros((width,height))
-    greenB = np.zeros((width,height))
-    blueB = np.zeros((width,height))
+    red, green, blue = imread_colour(imagePath)
     rB = np.zeros((width,height))
     gB = np.zeros((width,height))
     bB = np.zeros((width,height))
     bananaSA = 0
 
-    #find the otsu threshold of the red channel and then binarized LAB image into a black and white image
-    #the pixels of the banana should be white (255), whilst the rest of the image should be white (0)
-    # thr = otsu(red)
-    # imgRedOtsu = im2bw(red,thr)
-    # # imwrite_gray("Red2.jpeg", imgRedOtsu)
-    red, green, blue = imread_colour(imagePath)
+    # The blue channel is binarized since this channel is where the colors of 
+    # a banana (green - yellow) should show up most in 
+    thr = otsu(b)
+    imgBlueOtsu = im2bw(b,thr)
 
     #the Black and White image is looked at pixel by pixel
-    #the white pixels of the the image are saved as the color of the original image, whilst the rest of the image is saved as black pixels
-    #this allows the banana to keep it's color while the rest of the image is blackenes
+    #the black pixels of the the image are saved as the color of the original image, whilst the rest of the image is saved as white pixels
+    #this allows the banana to keep it's color while the rest of the image is whiteness
     for i in range(0, width-1):
         for j in range(0, height-1):
-            # avg = (float(red[i,j]) + float(blue[i,j]) + float(green[i,j])) / 3
-            # if imgRedOtsu[i,j] == 255:
-            #      redB[i,j] = red[i,j]
-            #      greenB[i,j] = green[i,j]
-            #      blueB[i,j] = blue[i,j]
-            #      bananaSA += 1
-            # else:
-            #      redB[i,j] = 255
-            #      greenB[i,j] = 255
-            #      blueB[i,j] = 255
-
             if imgBlueOtsu[i,j] != 255:
                 rB[i,j] = red[i,j]
                 gB[i,j] = green[i,j]
@@ -97,122 +122,37 @@ def imageSegment(imagePath, imageName, output):
                 gB[i,j] = 255
                 bB[i,j] = 255
 
-    #image is saved and total time taken, total pixel size are all written to a text file
-    #imwrite_colour("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png', redB, greenB, blueB)
+    #Image is saved and total time taken, total pixel size are all written to a text file
     imwrite_colour("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png', rB, gB, bB)
+    object.append(bananaSA)
+    object.append("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png')
+    
     endDT = datetime.datetime.now()
     currentDT = endDT - startDT
     output.write(imageName + ": \tTime Taken: " + str(currentDT) + "\tBanana Size: " + str(bananaSA) + "\t")
-    object.append(bananaSA)
-    object.append("../images/processed/" + imageName.rsplit('.', 1)[0] + '.png')
-    #Returns the surface area of the banana for BrownSpot Analysis
-    print (imageName + "\t - \t" + str(bananaSA) + "\n")
+   
+    #Returns the surface area and file path of the banana image as one object for BrownSpot Analysis
     return object
 
-def ColorAnaysis(imagePath):
-
-
-    pass
-
-
-    # for i in range(0, HSV.shape[0]):
-    #     for j in range(0, HSV.shape[1]):
-    #         HSV[i,j][0] = HSV[i,j][0]*1.4
-    #         HSV[i,j][1] = HSV[i,j][0]/2.55
-    #         HSV[i,j][2] = HSV[i,j][0]/2.55
-    #
-    # im4 = cv2.imread(imagePath)
-    #
-    # for i in range(0, HSV.shape[0]):
-    #     for j in range(0, HSV.shape[1]):
-    #         sum = float(HSV[i,j][0]) + float(HSV[i,j][1]) + float(HSV[i,j][2])
-    #         if (sum != 0):
-    #             if (sum > 90):
-    #                 # print("hi")
-    #                 HSV[i,j][0] = 0
-    #                 HSV[i,j][1] = 0
-    #                 HSV[i,j][2] = 0
-    #             else:
-    #                 HSV[i,j][0] = im4[i,j][0]
-    #                 HSV[i,j][1] = im4[i,j][1]
-    #                 HSV[i,j][2] = im4[i,j][2]
-    #
-    # cv2.imwrite("../images/processed/rgbConvert.png", HSV)
-    #
-    # redC, greenC, blueC = imread_colour("../images/processed/rgbConvert.png")
-    # thr = otsu(blueC)
-    # imgBlueCOtsu = im2bw(blueC,thr)
-    # imwrite_gray("Blue3.jpeg", imgBlueCOtsu)
-
-
-# TODO: BrownSpot Analysis
-"""
-def brownSpotAnalysis(bananaSize,imagePath,imageName):
-    im = io.imread(imagePath)
-
-    # original image is converted to lab color space
-    lab_color = color.rgb2lab(im);
-    #converted to yCbCr color space and gray
-    yCbCr_color = cv2.cvtColor(im,cv2.COLOR_BGR2YCR_CB)
-    gray = color.rgb2gray(yCbCr_color)
-
-    # save the gray image and read it
-    misc.imsave("../images/processed/gray.png",gray);
-    gray = misc.imread("../images/processed/gray.png");
-
-    #Minimum error is used to get the thresholding value
-    #what does this minimum error mean?
-    val = minError(gray)
-    print "min error threshold value: " + str(val)
-
-    # Masks are created from gray image based on the threshold value
-    ret, mask = cv2.threshold(gray, val, 255, cv2.THRESH_BINARY)
-    mask2 = cv2.bitwise_not(mask)
-
-    #a mask is created based on the l.a.b color space for brown spots on the banana
-    brownSpotMask = np.zeros((im.shape[0], im.shape[1]))
-    for rowNum in range(len(lab_color)):
-        for colNum in range (len(lab_color[rowNum])):
-            if((lab_color[rowNum][colNum][1] < 12 ) and (lab_color[rowNum][colNum][2] > 28) and mask2[rowNum][colNum] !=0):
-                brownSpotMask[rowNum][colNum]= 255
-            else:
-                brownSpotMask[rowNum][colNum] = 0
-
-    misc.imsave("../images/processed/lab.png",lab_color);
-    misc.imsave("../images/processed/brownspotmask.png",brownSpotMask);
-
-    browspotmask = misc.imread("../images/processed/brownspotmask.png");
-
-    # 130 threshold to create mask from brown spot mask image
-    ret, mask3 = cv2.threshold(browspotmask, 130, 255, cv2.THRESH_BINARY);
-    mask4 = cv2.bitwise_not(mask3)
-
-    banCount = cv2.bitwise_and(mask4,mask4, mask = mask2)
-    brownSpot = np.count_nonzero(banCount)
-    bananaCount2 = cv2.bitwise_and(mask3,mask3,mask = mask2)
-    banana = np.count_nonzero(bananaCount2)
-
-    print "Ripeness Level is: " + str((float(brownSpot)/(banana+brownSpot)) * 100);
-
-    #Union is made of the original image and the mask for viewing
-    union = cv2.bitwise_and(im,im,mask = mask2)
-    #Images are created with the minimum error union and the lab masks
-    brownSpotsIm= cv2.bitwise_and(union,union,mask = mask4)
-    bananaIm = cv2.bitwise_and(union,union,mask = mask3)
-
-    # saving images
-    # misc.imsave("../images/processed/brownSpotsimage.png",brownSpotsIm);
-    misc.imsave("../images/processed/bananaIm.png",bananaIm);
-"""
-def difference(a,b):
-    diff = abs(a-b)
-    return diff
-
+# Function: Brown Spot Analysis
+#
+# The function takes in the segmented image and aims to check for and segment brown
+# spots to determine the ripeness level of the banana
+# 
+# Parameters:
+# (in)    imagePath, imageName, output :  file path of the image; fileName; datafile to print results of the function
+# (out)   ripenessLevel                     :  Returns the surface area of the banana in pixels
 def brownSpotAnalysis(bananaSize,imagePath, output):
+    # Variables delared and ripeness lvl initialized for "Not Banana"
+    global tempFile
+    ripenessLvl = 5
     im = io.imread(imagePath)
-    # original image is converted to lab color space
+    brownSpots = 0
+
+    # Segmented image is converted to lab color space
+    # The B* and A* lab channels are compared to check for the colors yellow, green, and brown
+    # a difference of <25 indicates browness. These pixels are set to white so that only the banana pixels remain
     lab_color = color.rgb2lab(im)
-    brown_spot = 0
     for i in range(im.shape[0]):
         for j in range(im.shape[1]):
             if difference(lab_color[i, j][0], lab_color[i, j][1]) < 25 and difference(lab_color[i, j][1], lab_color[i, j][2]) < 25: # it is brown spot
@@ -220,60 +160,103 @@ def brownSpotAnalysis(bananaSize,imagePath, output):
                     im[i, j][0] = 255
                     im[i, j][1] = 255
                     im[i, j][2] = 255
-                    brown_spot += 1
+                    brownSpots += 1
+    
+    # Brown spot to banana SA percentage is calculated and calls for color analysis
+    brown = ((float(brownSpots) / float(bananaSize)) * 100)
+    misc.imsave(tempFile, im)
+    avg = colorAnaysis(tempFile)
 
-    brown = ((float(brown_spot) / float(bananaSize)) * 100)
-    brown_percent = str(brown) + " %"
-    print(brown)
-    if (brown > 0.00 and brown < 18.00):
-        misc.imsave("../images/brownSpot/yellowed/brownSpot_" + os.path.basename(imagePath), im)
-    elif (brown >= 18.00 and brown < 47.00):
-        misc.imsave("../images/brownSpot/ripe/brownSpot_" + os.path.basename(imagePath), im)
-    elif (brown >= 47.00 and brown < 76.00):
-        misc.imsave("../images/brownSpot/very_Ripe/brownSpot_" + os.path.basename(imagePath), im)
-    elif (brown >= 76.00):
-        print("brown: " + str(brown))
-        misc.imsave("../images/brownSpot/over_Ripe/brownSpot_" + os.path.basename(imagePath), im)
+    # print("Brown spot: " + str((float(brownSpots) / float(bananaSize)) * 100) + " %" + "\n")
+    # print("avg = " + str(avg))
+
+    # Based on brownspot percentages, the images will be organized into their respective ripeness grades
+    if (avg > 0.10 and avg <= 40.00):
+        # Because yellowed and green unripe bananas may have the same number of brownspots,
+        # the color analysis average will be used to seperate yellow (< 4 g/b ratio) and green
+        if (brown > 0.00 and brown < 14.00):
+            if (avg < 4.00):
+                misc.imsave("../images/brownSpot/yellowed/brownSpot_" + os.path.basename(imagePath), im)
+                ripenessLvl = 1
+            else:
+                misc.imsave("../images/brownSpot/un_Ripe/brownSpot_" + os.path.basename(imagePath), im)
+                ripenessLvl = 0
+        elif (brown >= 14.00 and brown < 30.00):
+            misc.imsave("../images/brownSpot/ripe/brownSpot_" + os.path.basename(imagePath), im)
+            ripenessLvl = 2
+        elif (brown >= 30.00 and brown < 70.00):
+            misc.imsave("../images/brownSpot/very_Ripe/brownSpot_" + os.path.basename(imagePath), im)
+            ripenessLvl = 3
+        elif (brown >= 70.00):
+            misc.imsave("../images/brownSpot/over_Ripe/brownSpot_" + os.path.basename(imagePath), im)
+            ripenessLvl = 4
+        else:
+            misc.imsave("../images/brownSpot/not_Banana/brownSpot_" + os.path.basename(imagePath), im)
     else:
         misc.imsave("../images/brownSpot/not_Banana/brownSpot_" + os.path.basename(imagePath), im)
-
-    output.write("Brown spot: " + brown_percent + "\n")
-    print("Brown spot: " + brown_percent)
-    pass
+    
+    # Based on brownspot and color analysis, a ripeness level will be determined and the image will be 
+    # saved in the corresponding folder.
+    output.write("Brown spot: " + str(((float(brownSpots) / float(bananaSize)) * 100)) + " %" + "\n")
+    output.write(os.path.basename(imagePath) + "\t\t" + str(avg) + "\n")
+    return ripenessLvl
 
 #Program loop to run the program
+tempFile = "hsv.jpg"
 inputFolder = "../images/raw/"
-data2 = open("../data/testing.txt", 'w')
-fileCount = 0
-obj = []
+ripeGrade = ["Unripe", "Yellow", "Ripe", "Very Ripe", "Too Ripe/Going Bad", "Not a Banana"]
 progExit = False
-while (progExit == False):
-    inp = raw_input("\n \nExecute Algorithm on a single (F)ile, Run (T)est Suite, (Q)uit? ")
-    if (inp == 'f') or (inp == 'F'):
-        print("Make sure the image is inside the \'image/raw/\' folder")
-        fileName = raw_input("Enter File Name: ")
-        obj = imageSegment(inputFolder + fileName, fileName, data2)
-        bananaSize = obj[0]
-        print(str(bananaSize))
-        brownSpotAnalysis(bananaSize, obj[1]);
 
+# Command loop to take in user input of how they want to process images, will end when user chooses to quit
+while (progExit == False):
+    fileCount = 0
+    obj = []
+    if os.path.exists(tempFile):
+       os.remove(tempFile)
+    inp = raw_input("Execute Algorithm on a single (F)ile, Run (T)est Suite, (Q)uit? ")
+
+    #This option is to only process a single image at a time, returning in command-line feedback with the option to look at a text file
+    if (inp == 'f') or (inp == 'F'):
+        print("Make sure the image is inside the \'image/raw/\' folder\n")
+        fileName = raw_input("Enter File Name: ")
+        if os.path.exists(inputFolder + fileName):
+            singleData = open("../data/singleResults.txt", 'a+')
+            startDT = datetime.datetime.now()
+            obj = imageSegment(inputFolder + fileName, fileName, singleData)
+            bananaSize = obj[0]
+            ripenessLvl = brownSpotAnalysis(bananaSize, obj[1], singleData)
+            endDT = datetime.datetime.now()
+            currentDT = endDT - startDT
+
+            print ("\nThe image:" + fileName + " is   " + ripeGrade[ripenessLvl] + "\nTime Taken: " + str(currentDT) + "\nCheck \'../data/singleResults\' for more details.\n") 
+            singleData.close()
+        else:
+            print("\nThat file/directory does not exist, please import the image into the \'image/raw/\' folder or double check the spelling and try again.\n")
+
+    #This option is to only process every .jpg image inside the ../images/raw directory, returning all the processing information in a text file
     elif (inp == 't') or (inp == 'T'):
         print("Testing Algorithms...")
-        data = open("../data/veryRipe_Results.txt", 'w')
+        data = open("../data/testingResults.txt", 'w+')
+        startADT = datetime.datetime.now()
+        
         for file in glob.glob(inputFolder + "*.jpg"):
             fileCount += 1
             fname = os.path.basename(file)
-            if (fname[0] == 'v'):
-                print("")
-                obj = imageSegment(inputFolder + fname, fname, data)
-                bananaSize = obj[0]
-                brownSpotAnalysis(bananaSize, obj[1], data);
-                loadingBar(fileCount,len(glob.glob(inputFolder + "*.jpg")),2)
+            print("")
+            obj = imageSegment(inputFolder + fname, fname, data)
+            bananaSize = obj[0]
+            brownSpotAnalysis(bananaSize, obj[1], data)
+            loadingBar(fileCount,len(glob.glob(inputFolder + "*.jpg")),2)
+        
         data.close()
+        endADT = datetime.datetime.now()
+        currentADT = endADT - startADT
+        print ("\nDone!\n Total time taken: " + str(currentADT) + "\nTo look at results check the \"..\data\testingResults.txt\" file.\n")
 
+    # For users to quit the program
     elif (inp == "q") or (inp == "Q"):
-        print("Ending Program...")
+        print("Ending Program...\n")
         progExit = True
 
     else:
-        print("Please check your input")
+        print("Please check your input\n")

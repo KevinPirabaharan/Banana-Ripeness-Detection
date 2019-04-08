@@ -1,0 +1,2 @@
+g001.jpg: 	Time Taken: 0:00:06.035422	Banana Size: 176397	Brown spot: 5.25632522095 %
+g001.png		9.71237557393
