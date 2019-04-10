@@ -76,6 +76,7 @@ def colorAnaysis(brownImagePath):
     # The average green/blue ratio for the image is calculated and returned
     # Theoretically, the higher the avg; the greener the image is
     avg = float(sum(ratio) / len(ratio))
+    
     return avg
 
 # Function: Image Segmentation
@@ -167,14 +168,11 @@ def brownSpotAnalysis(bananaSize,imagePath, output):
     misc.imsave(tempFile, im)
     avg = colorAnaysis(tempFile)
 
-    # print("Brown spot: " + str((float(brownSpots) / float(bananaSize)) * 100) + " %" + "\n")
-    # print("avg = " + str(avg))
-
     # Based on brownspot percentages, the images will be organized into their respective ripeness grades
-    if (avg > 0.10 and avg <= 40.00):
+    if (avg >= 1.10 and avg <= 40.00):
         # Because yellowed and green unripe bananas may have the same number of brownspots,
         # the color analysis average will be used to seperate yellow (< 4 g/b ratio) and green
-        if (brown > 0.00 and brown < 14.00):
+        if (brown > 0.30 and brown < 14.00):
             if (avg < 4.00):
                 misc.imsave("../images/brownSpot/yellowed/brownSpot_" + os.path.basename(imagePath), im)
                 ripenessLvl = 1
@@ -197,8 +195,7 @@ def brownSpotAnalysis(bananaSize,imagePath, output):
     
     # Based on brownspot and color analysis, a ripeness level will be determined and the image will be 
     # saved in the corresponding folder.
-    output.write("Brown spot: " + str(((float(brownSpots) / float(bananaSize)) * 100)) + " %" + "\n")
-    output.write(os.path.basename(imagePath) + "\t\t" + str(avg) + "\n")
+    output.write("Brown spot: " + str(((float(brownSpots) / float(bananaSize)) * 100)) + " %" + "\t\t" + str(avg))
     return ripenessLvl
 
 #Program loop to run the program
@@ -228,7 +225,7 @@ while (progExit == False):
             endDT = datetime.datetime.now()
             currentDT = endDT - startDT
 
-            print ("\nThe image:" + fileName + " is   " + ripeGrade[ripenessLvl] + "\nTime Taken: " + str(currentDT) + "\nCheck \'../data/singleResults\' for more details.\n") 
+            print ("\nThe image: " + fileName + " is " + ripeGrade[ripenessLvl] + "\nTime Taken: " + str(currentDT) + "\nCheck \'../data/singleResults\' for more details.\n") 
             singleData.close()
         else:
             print("\nThat file/directory does not exist, please import the image into the \'image/raw/\' folder or double check the spelling and try again.\n")
@@ -245,13 +242,14 @@ while (progExit == False):
             print("")
             obj = imageSegment(inputFolder + fname, fname, data)
             bananaSize = obj[0]
-            brownSpotAnalysis(bananaSize, obj[1], data)
+            ripenessLvl = brownSpotAnalysis(bananaSize, obj[1], data)
+            data.write("\t\t" + str(ripeGrade[ripenessLvl]) + "\n")
             loadingBar(fileCount,len(glob.glob(inputFolder + "*.jpg")),2)
         
         data.close()
         endADT = datetime.datetime.now()
         currentADT = endADT - startADT
-        print ("\nDone!\n Total time taken: " + str(currentADT) + "\nTo look at results check the \"..\data\testingResults.txt\" file.\n")
+        print ("\nDone!\n Total time taken: " + str(currentADT) + "\nTo look at results check the \"..\data\\testingResults.txt\" file.\n")
 
     # For users to quit the program
     elif (inp == "q") or (inp == "Q"):
