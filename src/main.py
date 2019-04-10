@@ -1,6 +1,6 @@
 #Banana Ripeness Detection
 #Kevin Pirabaharan (0946212), Ena So (0961375), Muhammad Jaffar (0911910)
-#This program creates segments bananas from images and detects brown spots
+#This program creates and segments bananas from images and detects brown spots
 # on the banana to determine the ripeness of the bananas.
 from imageIO import *
 from imthr_lib import*
