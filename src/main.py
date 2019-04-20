@@ -169,7 +169,7 @@ def brownSpotAnalysis(bananaSize,imagePath, output):
     avg = colorAnaysis(tempFile)
 
     # Based on brownspot percentages, the images will be organized into their respective ripeness grades
-    if (avg >= 1.10 and avg <= 40.00):
+    if (avg >= 1.10 and avg <= 40.00) and (avg >= 0.300 and avg <= 100.00):
         # Because yellowed and green unripe bananas may have the same number of brownspots,
         # the color analysis average will be used to seperate yellow (< 4 g/b ratio) and green
         if (brown > 0.30 and brown < 14.00):
