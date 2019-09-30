@@ -1,5 +1,4 @@
 # CIS-4720-Banana Ripeness Detection
-Kevin Pirabaharan (0946212), Ena So (0961375), Muhammad Jaffar (0911910)
 CIS*4720 Final Project Submission (README)
 
 Program Description
