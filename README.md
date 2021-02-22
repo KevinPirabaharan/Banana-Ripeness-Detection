@@ -1,5 +1,4 @@
-# CIS-4720-Banana Ripeness Detection
-CIS*4720 Final Project Submission (README)
+# Banana Ripeness Detection
 
 Program Description
 ======================
@@ -22,7 +21,6 @@ Submission Contents
 =======================
 Included in this folder are:
 - This README
-- Final Project Report - FinalReport.pdf
 - data folder
     - singleResults.txt (Results of single image are appeneded)
     - testingResults.txt (Results of all images are printed to file)
@@ -34,12 +32,10 @@ Included in this folder are:
     - Python code used:
         - main.py (algorithms to process images in addition to function that compares images to ground truth)
         - imthr_lib.py (binarizing functions) and imageIO.py (opening and closing images)
-            - provided inside python toolbox given to us by Dr. Denis Nikitenko
-
 
 Limitations
 ================
-The amount of testing shows that we need to integrate shape analysis into our code so that results become more perfect. We found in our testing that images with stark backgrounds don't get segmented correctly. Images with similar foregrounds also get analyzed as bananas when they shouldn't be. 
+The amount of testing shows that we need to integrate shape analysis into our code so that results would improve. We found in our testing that images with stark backgrounds don't get segmented correctly. Images with similar foregrounds also get analyzed as bananas when they shouldn't be. 
 
 Running Code
 ================
